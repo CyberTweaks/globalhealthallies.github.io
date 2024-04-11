@@ -1,0 +1,83 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font for the entire body */
+    font-size: 16px; /* Set a base font size */
+    line-height: 1.6; /* Set line height for better readability */
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add some space below headings */
+    margin-top: 70px; /* Add some space above headings */
+  }
+  
+  
+  .about-section p,
+  .contact-section p {
+    font-size: 18px; /* Paragraph font size */
+    margin-bottom: 10px; /* Add some space below paragraphs */
+  }
+  
+  .contact-section p2 {
+    font-size: 16px; /* Additional paragraph font size */
+    font-style: italic; /* Optionally use italic style */
+  }
+  
+  ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+  }
+  
+  ul li {
+    font-size: 16px; /* List item font size */
+    margin-bottom: 8px; /* Add some space between list items */
+  }
+  
+/* CSS for black strip at the top */
+.black-strip {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+/* CSS for the wrapper section */
+.wrapper {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+/* CSS for the dots */
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Styling for the h1 */
+h1 {
+    font-family: Arial, sans-serif;
+}
+/* Styling for the black strip */
+.black-strip {
+  background-color: #000;
+  padding: 7px 20px; /* Adjust padding as needed */
+  text-align: right;
+  font-family: 'Montserrat';
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Styling for the login and sign up links */
+.black-strip a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px; /* Adjust margin as needed */
+}

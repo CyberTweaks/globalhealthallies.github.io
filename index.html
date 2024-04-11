@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Medical web</title>
+    <link rel="stylesheet" href="./src/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="./helpbot/helpbot.css" rel="stylesheet"></link>
+</head>
+
+<body>
+    <div class="black-strip">
+        <a href="sub-pages\about_us\about_us.html">About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/credentials/sign up/signup.html">Sign Up</a>
+    </div>
+    <video id="video-background" autoplay loop muted>
+        <source src="./media/video/Reproduction.mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="box"></div>
+    <a href="./sub-pages/BMI Calculator/BMI_calculator.html" class="top-button">BMI Calculator</a>
+    <a href="./sub-pages/Medicine_Suggester/Medicine_suggester.html" class="center-button">MediMatch Pro</a>
+    <a href="./sub-pages/Hospital suggester/Hospital_suggester.html" class="bottom-button">HospiMatch Prime</a>
+
+    <a href="#" class="chat-icon" onclick="toggleChatbot()">
+        <img src="media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+    </a>
+
+    <!-- Chatbot popup -->
+    <div id="chatbot-popup" class="chatbot-popup">
+        <div class="chat-messages" id="chat-messages">
+            <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+        </div>
+        <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
+        <button onclick="sendMessage()" class="send-button">Send</button>
+        <script src="./helpbot/helpbot.js"></script>
+    </div>
+    
+</body>
+
+</html>

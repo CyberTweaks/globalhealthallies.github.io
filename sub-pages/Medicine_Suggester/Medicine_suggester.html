@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedy Suggester</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link><!--Link to Google Fonts -->
+    <link rel="stylesheet" href="../../src/main.css"> </link>
+    <script src="database.js"></script>
+    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div class="black-strip">
+        <a href="../about_us/about_us.html">About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to about us page -->
+        <a href="../credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to login page -->
+        <a href="../credentials/sign up/signup.html">Sign Up</a> <!-- Link to sign up page -->
+    </div>
+    <div id="container">
+        <h1 style="text-align: center;">Remedy Suggester</h1>
+        <br><br><br><br>
+        <div id="symptomInputContainer">
+            <label for="symptoms" >Enter your symptoms (comma-separated):</label>
+            <input type="text" id="symptoms">
+        </div>
+            <button onclick="suggestMedicine()">Suggest Remedy</button>
+            <div id="medicineSuggestion"></div>
+        </div>
+        <a href="#" class="chat-icon" onclick="toggleChatbot()">
+            <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+        </a>
+    
+        <!-- Chatbot popup -->
+        <div id="chatbot-popup" class="chatbot-popup">
+            <div class="chat-messages" id="chat-messages">
+                <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+            </div>
+            <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
+            <button onclick="sendMessage()" class="send-button">Send</button>
+            <script src="../../helpbot/helpbot.js"></script>
+    </body>
+</html>

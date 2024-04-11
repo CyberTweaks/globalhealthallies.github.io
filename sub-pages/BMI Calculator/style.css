@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: radial-gradient(circle, #013bb8, #c40d0d), 
+    linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+  background-size: cover; /* Ensure full coverage of the background */
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.black-strip {
+    background-color: #000;
+    padding: 0; /* Remove padding to eliminate space */
+    text-align: right;
+    font-family: 'Montserrat';
+    color: #fff;
+    position: fixed; /* Position the black strip */
+    top: 0; /* Align it to the top */
+    width: 100%; /* Make it full width */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .black-strip a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px; /* Adjust margin as needed */
+  }
+  

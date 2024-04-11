@@ -1,0 +1,214 @@
+
+
+.wrapper h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: sans-serif;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.wrapper div {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 100px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: 4s linear infinite;
+}
+div .dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.wrapper div:nth-child(2) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+
+.wrapper div:nth-child(3) {
+  top: 60%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+
+.wrapper div:nth-child(4) {
+  top: 40%;
+  left: 40%;
+  animation: animate 3s linear infinite;
+}
+
+.wrapper div:nth-child(5) {
+  top: 66%;
+  left: 30%;
+  animation: animate 7s linear infinite;
+}
+
+.wrapper div:nth-child(6) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+.wrapper div:nth-child(7) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+
+.wrapper div:nth-child(8) {
+  top: 70%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+
+.wrapper div:nth-child(9) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.wrapper div:nth-child(10) {
+  top: 50%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+
+.wrapper div:nth-child(11) {
+  top: 45%;
+  left: 20%;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
+}
+.center-button {
+  position: fixed;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 10px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: black; 
+  cursor: pointer;
+  border-radius: 5px; 
+  text-decoration: none; 
+}
+.center-button:hover {
+  background-color: #075e04;/* New button color on hover */
+}
+.top-button {
+  position: fixed;
+  top:  43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 10px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: black; 
+  cursor: pointer;
+  border-radius: 5px; 
+  text-decoration: none; 
+}
+.top-button:hover {
+  background-color: #075e04;/* New button color on hover */
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -1000;
+  background-size: cover;
+}
+.corner{
+  position: top;
+  top:  40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 10px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: black; 
+  cursor: pointer;
+  border-radius: 5px; 
+  text-decoration: none;
+}
+/* Styling for the black strip */
+.black-strip {
+  background-color: #000;
+  padding: 10px 0; /* Adjust padding as needed */
+  text-align: right;
+  font-family: 'Montserrat';
+  color: #fff;
+}
+
+/* Styling for the login and sign up links */
+.black-strip a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px; /* Adjust margin as needed */
+}
+.bottom-button {
+  position: fixed;
+  top:  30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 10px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px; 
+  background-color: #4CAF50; 
+  color: white; 
+  border: black; 
+  cursor: pointer;
+  border-radius: 5px; 
+  text-decoration: none; 
+} 
+.bottom-button:hover {
+  background-color: #075e04;/* New button color on hover */
+}
+.box {
+  width: 500px; /* Adjust width as needed */
+  opacity: 0.9;
+  height: 480px; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Background color */
+  border: 4px solid #ccc; /* Border style */
+  border-radius: 20px; /* Rounded corners */
+  padding: 50px; /* Padding inside the box */
+  margin: 63px auto; /* Center the box horizontally with some margin from top */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}

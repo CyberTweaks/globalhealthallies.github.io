@@ -1,0 +1,170 @@
+/* Global styles */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 1%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif; /* Change font family */
+  }
+
+  /* Heading styles */
+  h1 {
+    text-align: center; /* Center align the heading */
+    color: #af0000; /* Set heading color */
+    font-size:  60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Container styles */
+  div {
+    text-align: center; /* Center align the div */
+    margin-top: 1px; /* Add some top margin */
+  }
+
+  /* Form element styles */
+  label, input, button {
+    display: block;
+    margin: 1px auto; /* Center align the elements */
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc; /* Set border color */
+    border-radius: 5px; /* Add some border radius */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s; /* Add transition effect */
+  }
+
+  input[type="text"]:focus {
+    border-color: #007bff; /* Highlight input on focus */
+  }
+
+  /* Button styles */
+  button {
+    padding: 10px 20px;
+    background-color: #067eff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s; /* Add transition effect */
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+  }
+
+  /* Medicine suggestion text styles */
+  #medicineSuggestion {
+    text-align: center; /* Center align the suggestion text */
+    margin-top: 1px; /* Add some top margin */
+    color: #000000; /* Set suggestion text color */
+  }
+
+  /* Video background styles */
+  #video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    background-size: cover;
+  }
+
+  /* Additional styles */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 1%;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif/* the font family */
+    
+  }
+
+  /* Container styles */
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1%;
+  }
+
+  /* Symptom input container styles */
+  #symptomInputContainer {
+    margin-bottom: 1px;
+  }
+
+  /* Symptoms input field styles */
+  #symptoms {
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* Medicine suggestion text styles */
+  #medicineSuggestion {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  /* Video background styles */
+  #video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -1000;
+    background-size: cover;
+  }
+
+ href="./sub-pages/BMI Calculator/BMI_calculator.html" 
+href="./sub-pages/Medicine_Suggester/Medicine_suggester.html" class="center-button"
+   href="./sub-pages/Hospital suggester/Hospital_suggester.html"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   document.addEventListener("DOMContentLoaded", ()=>{
+    const loginForm = document.querySelector('#login');
+    const createAccountForm = document.querySelector('#createAccount');
+    
+    document.querySelector("#linkCreateAccount").addEventListener("click", () =>{
+        e.preventDefault();
+        loginForm.classList.add('form--hidden');
+        createAccountForm.classList.remove('form--hidden');
+    });
+
+    document.querySelector("#linkLogin").addEventListener("click", () =>{
+        e.preventDefault();
+        loginForm.classList.remove('form--hidden');
+        createAccountForm.classList.add('form--hidden');
+    });
+})

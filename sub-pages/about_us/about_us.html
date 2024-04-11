@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future In Our Hands</title>
+  <link href="style.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
+  <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
+</head>
+  <body>
+    <!-- Black strip at the top with login and signup redirect links -->
+    <div class="black-strip">
+      <a href="../credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to login page -->
+      <a href="../credentials/sign up/signup.html">Sign Up</a>
+    </div>
+
+  <!-- About Us Section -->
+    <section class="about-section">
+      <h2>About Us</h2>
+      <p>Welcome to Future In Our Hands - your trusted source for reliable healthcare information and services. Our mission is to provide accessible and quality healthcare solutions to individuals and communities, empowering them to make informed decisions about their health and well-being.</p>
+      <p>At Future In Our Hands, we are committed to delivering innovative and personalized healthcare experiences that prioritize patient care and outcomes. Whether it's finding the right doctor, managing your health records, or staying up-to-date with the latest medical advancements, we're here to support you every step of the way.</p>
+      <p>At GCC International School, we believe in nurturing young minds to become global citizens equipped with knowledge and compassion. Founded by a dedicated team of developers, including Mst. Aryan Agarwal, Mst. Zohaib Alam, and Mst. Vishvajeet Singh Rajpurohit, our mission is to empower individuals to lead healthy and fulfilling lives. Through our innovative health website, we aim to provide essential tools and resources to support people on their wellness journey.
+      With features like the BMI calculator, medicine suggester, and nearby hospital finder, our platform offers valuable assistance in managing health effectively. Beyond aiding individuals, we are committed to making a positive impact on the world by promoting wellness and fostering a sense of community. Together, let's embark on a journey to save lives, uplift spirits, and create a healthier, happier world for generations to come.
+      </p>
+    </section>
+
+  <!-- Contact Information Section -->
+    <section class="contact-section">
+      <h2>Contact Information</h2>
+      <p2>If you have any questions, feedback, or inquiries, please feel free to reach out to us:</p2>
+      <ul>
+      <li>Email: infomedcare@gmail.com</li>
+      <li>Address: GCC International School, Behind GCC Hotel & Club, Off. Mira Bhayander Road, Mira Road East, Thane – 401107</li>
+      </ul>
+    </section>
+
+    <a href="#" class="chat-icon" onclick="toggleChatbot()">
+      <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+    </a>
+
+  <!-- Chatbot popup -->
+    <div id="chatbot-popup" class="chatbot-popup">
+      <div class="chat-messages" id="chat-messages">
+        <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+    </div>
+    <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
+    <button onclick="sendMessage()" class="send-button">Send</button>
+    <script src="../../helpbot/helpbot.js"></script>
+  </body>
+</html>

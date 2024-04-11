@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 80, 228), blue);
+  color: #fff;
+  padding: 20px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.profile p {
+  margin: 0;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.actions {
+  margin-top: 30px;
+}
+
+.action-btn {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+.action-btn:hover{
+  background-color: #b4b4b4;
+}
+.mode-toggle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #113cff;
+  padding: 10px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center; /* Center align the content horizontally */
+  align-items: center; /* Center align the content vertically */
+  height: 50px; /* Set the height of the header */
+  background-color: rgb(0, 81, 255);
+  margin-bottom: 20px; /* Add margin to separate from the content */
+}
+
+.toggle-sidebar {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #666;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode {
+  background-color: #202020;
+  color: #fff;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to right, rgb(0, 132, 255), rgb(0, 110, 255), rgb(0, 50, 212));
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.sidebar.closed {
+  transform: translateX(-288px);
+}
+
+.sidebar .profile {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar .profile img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar .menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar .menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar .menu li a:hover {
+  background-color: #555;
+}
+
+.sidebar .actions {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.main-content header {
+  padding: 10px 50px,; /* Adjust the padding values for left and right sides */
+  background-color: rgb(0, 81, 255);
+}
+
+.toggle-sidebar {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 20px;
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}

@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #3498db; /* Blue */
+background-size: cover; /* Ensure full coverage of the background */
+}
+h2 {
+  color: #ffffff;
+  font-size: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.find-hospital-btn {
+  display: block; /* Change display to block */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 10px 20px; /* Add padding to the button */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius */
+  font-size: 16px; /* Button font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.find-hospital-btn:hover {
+  background-color: #0056b3; /* Change button background color on hover */
+}
+
+/* Medicine suggestion text styles */
+#medicineSuggestion {
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Symptoms input field styles */
+#symptoms {
+  width: 300px;
+  padding: 10px;
+  font-size: 18px;
+}
+/* Container styles */
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+/* Symptom input container styles */
+#symptomInputContainer {
+  margin-bottom: 20px;
+}
+/* Additional styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif/* the font family */
+  
+}
+/* Video background styles */
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  background-size: cover;
+}
+/* Medicine suggestion text styles */
+#medicineSuggestion {
+  text-align: center; /* Center align the suggestion text */
+  margin-top: 20px; /* Add some top margin */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fffbfb; /* Set suggestion text color */
+  background: linear-gradient(blue rgb(195, 0, 255)) ;
+}
+button:hover {
+  background-color: #0056b3; /* Change button background color on hover */
+}
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #ff0606; /* Set button background color */
+  color: #fff; /* Set button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+input[type="text"]:focus {
+  border-color: #007bff; /* Highlight input on focus */
+}
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc; /* Set border color */
+  border-radius: 5px; /* Add some border radius */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s; /* Add transition effect */
+}
+/* Form element styles */
+label, input, button {
+  display: block;
+  margin: 10px auto; /* Center align the elements */
+}
+/* Container styles */
+div {
+  text-align: center; /* Center align the div */
+}
+ /* Global styles */
+ body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif; /* Change font family */
+}
+
+/* Heading styles */
+h1 {
+  text-align: center; /* Center align the heading */
+  color: #af0000; /* Set heading color */
+  font-size:  60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+h1 {
+  text-align: center; /* Center align the heading */
+  color: #fff; /* Set heading color to white */
+  background-image: linear-gradient(to right, #ff6b6b, #556270); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 50px; /* Increase font size */
+  font-family: sans-serif; /* Use a modern sans-serif font */
+  padding: 20px 30px; /* Add padding for spacing */
+  margin-bottom: 30px; /* Add bottom margin for separation */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Increase letter spacing for emphasis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+div {
+  text-align: center; /* Center align the div */
+  margin-top: 0px; /* Add some top margin */
+}
+
+label, input, button {
+  display: block;
+  margin: px auto; /* Center align the elements */
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ffffff; /* Set border color */
+  border-radius: 5px; /* Add some border radius */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s; /* Add transition effect */
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* Highlight input on focus */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #bb0000; /* Set button background color */
+  color: #fff; /* Set button text color */
+  font-size: 21px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+button:hover {
+  background-color: #7a0000; /* Change button background color on hover */
+}
+
+#medicineSuggestion {
+  text-align: center; /* Center align the suggestion text */
+  margin-top: 20px; /* Add some top margin */
+  color: #000000; /* Set suggestion text color */
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  background-size: cover;
+}
+
+
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#symptomInputContainer {
+  margin-bottom: 20px;
+}
+
+#symptoms {
+  width: 300px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#medicineSuggestion {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #0044c2;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+
+
+/* External CSS file: style.css */
+
+.black-strip {
+  background-color: #000;
+  padding: 0; /* Remove padding to eliminate space */
+  text-align: right;
+  font-family: 'Montserrat';
+  color: #fff;
+  position: fixed; /* Position the black strip */
+  top: 0; /* Align it to the top */
+  width: 100%; /* Make it full width */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.black-strip a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px; /* Adjust margin as needed */
+}
+
+label[for="symptoms"] {
+  font-size: 20px;
+  color: #fff; /* Text color */
+  font-family: 'Arial', sans-serif; /* Font family */
+  font-weight: bold;
+  padding: 12px 20px; /* Padding */
+  border-radius: 25px; /* Border radius */
+  border: 2px solid #4CAF50; /* Border */
+  display: inline-block;
+  background: linear-gradient(135deg, #368ed6, #1578c9, #0855a1); /* Gradient background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+  transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}

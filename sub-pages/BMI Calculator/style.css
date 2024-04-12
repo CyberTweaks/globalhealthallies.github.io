@@ -72,3 +72,88 @@ h2 {
     margin: 0 5px; /* Adjust margin as needed */
   }
   
+  .chat-messages p {
+    margin-bottom: 10px; /* Add margin bottom between messages */
+  }
+  
+  /* CSS for the empty line */
+  .empty-line {
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+  }
+  
+  
+  /* CSS for the empty lines */
+  .chat-messages p.empty-line {
+    margin: 10px 0; /* Adjust margin as needed */
+  }
+  
+  /* CSS for the chat input */
+  .chat-input {
+    font-family: sans-serif;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* CSS for the send button */
+  .send-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #007be0;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Darken send button on hover */
+  .send-button:hover {
+    background-color: #0067bb;
+  }
+  
+  /* CSS for the options */
+  .option {
+    position: relative;
+    display: block;
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 535;
+    font-style: italic;
+  }
+  
+  .option:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Styling for the arrow */
+  .option::after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: transparent;
+    transition: color 0.3s;
+  }
+  
+  .option:hover::after {
+    color: #666666;
+  }
+  
+  

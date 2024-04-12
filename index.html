@@ -23,6 +23,7 @@
     <a href="./sub-pages/BMI Calculator/BMI_calculator.html" class="top-button">BMI Calculator</a>
     <a href="./sub-pages/Medicine_Suggester/Medicine_suggester.html" class="center-button">MediMatch Pro</a>
     <a href="./sub-pages/Hospital suggester/Hospital_suggester.html" class="bottom-button">HospiMatch Prime</a>
+    <a href="./sub-pages/Pharmavogue/medicineinfo.html" class="last-button">Pharmavogue</a>
 
     <a href="#" class="chat-icon" onclick="toggleChatbot()">
         <img src="media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
@@ -32,6 +33,10 @@
     <div id="chatbot-popup" class="chatbot-popup">
         <div class="chat-messages" id="chat-messages">
             <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+        </div>
+        <div class="options">
+            <button class="option" onclick="selectOption(1)">What is BMI Calculator?</button>
+            <button class="option" onclick="selectOption(2)">What is MediMatch Pro?</button>
         </div>
         <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
         <button onclick="sendMessage()" class="send-button">Send</button>

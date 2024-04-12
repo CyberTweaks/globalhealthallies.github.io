@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nearest Hospital Finder</title>
+    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
     <link rel="stylesheet" href="../../src/main.css"></link>
     <link rel="stylesheet" href="Hos_sug.css"></link>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
-    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
+    <script src="../../helpbot/helpbot.js"></script>
 </head>
 
 <body>
@@ -30,22 +31,26 @@
         <a href="../credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to login page -->
         <a href="../credentials/sign up/signup.html">Sign Up</a> <!-- Link to sign up page -->
     </div>
-    <a href="#" class="chat-icon" onclick="toggleChatbot()">
-        <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
-    </a>
-
-    <!-- Chatbot popup -->
-    <div id="chatbot-popup" class="chatbot-popup">
-        <div class="chat-messages" id="chat-messages">
-            <p class="greeting-message">Good day, how may I be of assistance to you?</p>
-        </div>
-        <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
-        <button onclick="sendMessage()" class="send-button">Send</button>
-        <script src="../../helpbot/helpbot.js"></script>
-    </div>
-    </div>
     <h2 id="h2">Nearest Hospital Finder</h2>
     <button onclick="redirectToNearestHospital()" class="find-hospital-btn">Find Nearest Hospital</button>
+
+    </div>
+        <a href="#" class="chat-icon" onclick="toggleChatbot()">
+            <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+        </a>
+
+  <!-- Chatbot popup -->
+  <div id="chatbot-popup" class="chatbot-popup">
+    <div class="chat-messages" id="chat-messages">
+        <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+    </div>
+    <div class="options">
+        <button class="option" onclick="selectOption(1)">What is BMI Calculator?</button>
+        <button class="option" onclick="selectOption(2)">What is MediMatch Pro?</button>
+    </div>
+    <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
+    <button onclick="sendMessage()" class="send-button">Send</button>
+</div>
 
     <script>
         function redirectToNearestHospital() {

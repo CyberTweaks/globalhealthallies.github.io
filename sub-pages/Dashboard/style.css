@@ -76,13 +76,13 @@ body {
   color: white;
   font-size: 16px; /* Adjust the font size as needed */
   cursor: pointer;
-  transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.10s;
 }
 
 .toggle-btn:hover {
   background-color: #1635c2;
   padding: 10px;
-  transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.10s;
 }
 
 .main-content {

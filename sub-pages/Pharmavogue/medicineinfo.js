@@ -1,6 +1,13 @@
-// Define the medicine database
+// Helper function to capitalize the first letter of each word
+function capitalizeFirstLetter(str) {
+    return str.replace(/\b\w/g, function(char) {
+        return char.toUpperCase();
+    });
+}
+
+// Medicine database object
 const medicineDatabase = {
-    
+    // Define your medicine data here
     "abilify": "abilify is an antipsychotic medication used to treat schizophrenia, bipolar disorder, major depressive disorder, and irritability associated with autism.",
     "abilify asimtufii": "abilify asimtufii is a medication used for the treatment of schizophrenia in adults.",
     "abilify maintena": "abilify maintena is a long-acting injectable form of aripiprazole, an antipsychotic medication used to treat schizophrenia.",
@@ -1224,18 +1231,73 @@ const medicineDatabase = {
     "zyprexa": "zyprexa, also known as olanzapine, is a medication used to treat schizophrenia and bipolar disorder.",
     "zyrtec": "zyrtec, also known as cetirizine, is an antihistamine medication used to relieve allergy symptoms such as hay fever and hives.",
     "zytiga": "zytiga, also known as abiraterone acetate, is a medication used to treat prostate cancer.",
-    "zyvox": "zyvox, also known as linezolid, is an antibiotic medication used to treat bacterial infections including pneumonia and skin infections."
-
-
- 
+    "zyvox": "zyvox, also known as linezolid, is an antibiotic medication used to treat bacterial infections including pneumonia and skin infections.",
+    'dolo': 'dolo 650 can be used for headaches, mild to high fevers, and any other type of bodily aches. it is usually prescribed by doctors in case of recurrent high fevers.',
+    'dolo 650 mg': 'dolo 650 can be used for headaches, mild to high fevers, and any other type of bodily aches. it is usually prescribed by doctors in case of recurrent high fevers.',
+    'dolo 650mg': 'dolo 650 can be used for headaches, mild to high fevers, and any other type of bodily aches. it is usually prescribed by doctors in case of recurrent high fevers.',
+    'dolo 650': 'dolo 650 can be used for headaches, mild to high fevers, and any other type of bodily aches. it is usually prescribed by doctors in case of recurrent high fevers.',
+    'amoxicillin 500 mg': 'amoxicillin 500 mg is an antibiotic used to treat various bacterial infections, including respiratory tract infections, ear infections, and urinary tract infections.',
+    'vitamin d 50000 iu': 'vitamin d 50000 iu is a vitamin supplement used to treat and prevent vitamin d deficiency, which can lead to conditions such as rickets, osteomalacia, and osteoporosis.',
+    'ibuprofen 800 mg': 'ibuprofen 800 mg is a nonsteroidal anti-inflammatory drug (nsaid) used to relieve pain, reduce inflammation, and lower fever caused by conditions such as arthritis, menstrual cramps, and injuries.',
+    'cetirizine hydrochloride 10 mg': 'cetirizine hydrochloride 10 mg is an antihistamine used to relieve allergy symptoms such as sneezing, itching, watery eyes, and runny nose caused by hay fever and other allergies.',
+    'azithromycin 250 mg': 'azithromycin 250 mg is an antibiotic used to treat bacterial infections such as respiratory tract infections, skin infections, and sexually transmitted diseases caused by susceptible organisms.',
+    'amlodipine besylate 10 mg': 'amlodipine besylate 10 mg is a calcium channel blocker medication used to treat high blood pressure (hypertension) and chest pain (angina) by relaxing blood vessels and improving blood flow.',
+    'albuterol sulfate 108 mcg/act': 'albuterol sulfate 108 mcg/act is a bronchodilator medication used to relieve and prevent bronchospasm (narrowing of airways) in conditions such as asthma and chronic obstructive pulmonary disease (copd).',
+    'cyclobenzaprine hydrochloride 10 mg': 'cyclobenzaprine hydrochloride 10 mg is a muscle relaxant medication used to relieve muscle spasms and pain caused by musculoskeletal conditions such as strains, sprains, and injuries.',
+    'cephalexin 500 mg': 'cephalexin 500 mg is an antibiotic used to treat bacterial infections such as respiratory tract infections, skin infections, urinary tract infections, and bone infections.',
+    'hydrochlorothiazide 25 mg': 'hydrochlorothiazide 25 mg is a diuretic medication used to treat high blood pressure (hypertension), fluid retention (edema), and other conditions by increasing urine production and reducing excess fluid in the body.',
+    'lisinopril 20 mg': 'lisinopril 20 mg is an angiotensin-converting enzyme (ace) inhibitor medication used to treat high blood pressure (hypertension), heart failure, and improve survival after heart attack by relaxing blood vessels and reducing workload on the heart.',
+    'amphetamine/dextroamphetamine 20 mg': 'amphetamine/dextroamphetamine 20 mg is a stimulant medication used to treat attention deficit hyperactivity disorder (adhd) and narcolepsy by increasing focus, attention, and alertness.',
+    'loratadine 10 mg': 'loratadine 10 mg is an antihistamine medication used to relieve allergy symptoms such as sneezing, itching, watery eyes, and runny nose caused by hay fever and other allergies.',
+    'amoxicillin-clavulanate potassium 875-125 mg': 'amoxicillin-clavulanate potassium 875-125 mg is a combination antibiotic used to treat bacterial infections such as respiratory tract infections, ear infections, sinus infections, and urinary tract infections.',
+    'folic acid 1 mg': 'folic acid 1 mg is a vitamin supplement used to prevent and treat folic acid deficiency, which can lead to conditions such as anemia and birth defects.',
+    'prednisone 20 mg': 'prednisone 20 mg is a corticosteroid medication used to treat inflammatory conditions such as arthritis, asthma, allergic reactions, and skin conditions.',
+    'benzonatate 100 mg': 'benzonatate 100 mg is a non-narcotic cough suppressant medication used to relieve cough caused by conditions such as colds, flu, and respiratory tract infections.',
+    'gabapentin 300 mg': 'gabapentin 300 mg is an anticonvulsant medication used to treat seizures, nerve pain (neuropathy), and other conditions such as restless legs syndrome and hot flashes.',
+    'zolpidem tartrate 10 mg': 'zolpidem tartrate 10 mg is a sedative-hypnotic medication used to treat insomnia (difficulty falling asleep or staying asleep) by slowing down brain activity and inducing sleep.',
+    'sulfamethoxazole/trimethoprim ds 800-160 mg': 'sulfamethoxazole/trimethoprim ds 800-160 mg is a combination antibiotic used to treat various bacterial infections, including urinary tract infections, respiratory tract infections, and skin infections.',
+    'methylprednisolone dose pack 4 mg': 'methylprednisolone dose pack 4 mg is a corticosteroid medication used to treat inflammatory conditions such as arthritis, asthma, allergic reactions, and skin conditions.',
+    'fluconazole 150 mg': 'fluconazole 150 mg is an antifungal medication used to treat yeast infections (candidiasis) of the mouth, throat, esophagus, lungs, urinary tract, and other parts of the body.',
+    'aspirin low dose 81 mg': 'aspirin low dose 81 mg is a nonsteroidal anti-inflammatory drug (nsaid) used to relieve pain, reduce inflammation, and prevent blood clots by inhibiting platelet aggregation.',
+    'atorvastatin calcium 40 mg': 'atorvastatin calcium 40 mg is a statin medication used to lower cholesterol levels and reduce the risk of heart attack, stroke, and other cardiovascular events in patients with high cholesterol.',
+    'ferrous sulfate 325 mg': 'ferrous sulfate 325 mg is an iron supplement used to prevent and treat iron deficiency anemia by replenishing iron stores in the body.',
+    'cyanocobalamin 1000 mcg/ml': 'cyanocobalamin 1000 mcg/ml is a vitamin b12 supplement used to treat and prevent vitamin b12 deficiency, which can lead to anemia, neurological problems, and other health issues.',
+    'metronidazole 500 mg': 'metronidazole 500 mg is an antibiotic and antiprotozoal medication used to treat bacterial infections, parasitic infections, and other conditions such as bacterial vaginosis and rosacea.',
+    'benzonatate 100 mg': 'benzonatate 100 mg is a non-narcotic cough suppressant medication used to relieve cough caused by conditions such as colds, flu, and respiratory tract infections.',
+    'pantoprazole sodium 40 mg': 'pantoprazole sodium 40 mg is a proton pump inhibitor (ppi) used to treat conditions such as gastroesophageal reflux disease (gerd), stomach ulcers, and acid reflux.',
+    'vitamin d3 50000 iu': 'vitamin d3 50000 iu is a vitamin supplement used to treat and prevent vitamin d deficiency, which can lead to conditions such as rickets, osteomalacia, and osteoporosis.',
+    'naproxen 500 mg': 'naproxen 500 mg is a nonsteroidal anti-inflammatory drug (nsaid) used to relieve pain, reduce inflammation, and lower fever caused by conditions such as arthritis, menstrual cramps, and injuries.',
+    'alprazolam 0.5 mg': 'alprazolam 0.5 mg is a benzodiazepine medication used to treat anxiety disorders, panic disorders, and anxiety associated with depression by enhancing the effects of gamma-aminobutyric acid (gaba) in the brain.',
+    'oseltamivir phosphate 75 mg': 'oseltamivir phosphate 75 mg is an antiviral medication used to treat and prevent influenza (flu) virus infections by inhibiting the enzyme neuraminidase, which is essential for the replication of the virus.',
+    'nitrofurantoin monohydrate macrocrystals 100 mg': 'nitrofurantoin monohydrate macrocrystals 100 mg is an antibiotic used to treat urinary tract infections caused by susceptible bacteria by inhibiting bacterial cell wall synthesis.',
+    'losartan potassium 100 mg': 'losartan potassium 100 mg is an angiotensin ii receptor blocker (arb) medication used to treat high blood pressure (hypertension) and reduce the risk of stroke and heart attack in patients with hypertension and left ventricular hypertrophy.',
+    'metoprolol succinate er 25 mg': 'metoprolol succinate er 25 mg is a beta-blocker medication used to treat high blood pressure (hypertension), chest pain (angina), heart failure, and prevent migraine headaches.',
+    'fluticasone propionate 50 mcg/act': 'fluticasone propionate 50 mcg/act is a corticosteroid medication used to treat asthma, allergic rhinitis (hay fever), and nasal polyps by reducing inflammation and swelling in the airways and nasal passages.',
+    'chlorhexidine gluconate 0.12%': 'chlorhexidine gluconate 0.12% is an antiseptic mouthwash used to treat gingivitis (gum disease) and prevent dental plaque by killing bacteria and reducing oral inflammation.',
+    'doxycycline hyclate 100 mg': 'doxycycline hyclate 100 mg is an antibiotic used to treat bacterial infections such as respiratory tract infections, skin infections, and sexually transmitted diseases.',
+    'metoprolol tartrate 25 mg': 'metoprolol tartrate 25 mg is a beta-blocker medication used to treat high blood pressure (hypertension), chest pain (angina), heart failure, and prevent migraine headaches.',
+    'phenazopyridine hcl 200 mg': 'phenazopyridine hcl 200 mg is a urinary analgesic used to relieve pain, burning, and discomfort caused by urinary tract infections and other urinary conditions.',
+    'latanoprost eye drops 0.005%': 'latanoprost eye drops 0.005% is a prostaglandin analog used to treat open-angle glaucoma and ocular hypertension by reducing intraocular pressure.',
+    'sertraline hcl 50 mg': 'sertraline hcl 50 mg is a selective serotonin reuptake inhibitor (ssri) antidepressant used to treat depression, obsessive-compulsive disorder (ocd), panic disorder, and other mental health conditions.',
+    'trazodone hydrochloride 50 mg': 'trazodone hydrochloride 50 mg is a serotonin antagonist and reuptake inhibitor (sari) antidepressant used to treat depression, anxiety, and insomnia.',
+    'omeprazole 20 mg': 'omeprazole 20 mg is a proton pump inhibitor (ppi) used to treat conditions such as gastroesophageal reflux disease (gerd), stomach ulcers, and acid reflux.',
+    'ciprofloxacin hydrochloride 500 mg': 'ciprofloxacin hydrochloride 500 mg is an antibiotic used to treat various bacterial infections, including urinary tract infections, respiratory tract infections, and skin infections.',
+    'levothyroxine sodium 50 mcg': 'levothyroxine sodium 50 mcg is a synthetic thyroid hormone used to treat hypothyroidism (underactive thyroid) and prevent goiter (enlarged thyroid gland).',
+    'meloxicam 15 mg': 'meloxicam 15 mg is a nonsteroidal anti-inflammatory drug (nsaid) used to relieve pain, reduce inflammation, and improve joint mobility in conditions such as osteoarthritis and rheumatoid arthritis.',
+    'docusate sodium 100 mg': 'docusate sodium 100 mg is a stool softener used to treat constipation and prevent straining during bowel movements by increasing the amount of water absorbed into the stool.',
+    'triamcinolone acetonide cream 0.1%': 'triamcinolone acetonide cream 0.1% is a corticosteroid medication used to relieve itching, redness, swelling, and other symptoms of inflammatory skin conditions such as eczema and psoriasis.'
+    'glymiciv m2': 'Glymiciv M2 is a combination medication used to manage type 2 diabetes. It contains a combination of two antidiabetic agents, which help control blood sugar levels by improving insulin sensitivity and reducing glucose production in the liver.'
+    'pudin hara': 'pudin hara is an ayurvedic medicine used for the relief of indigestion, gas, bloating, and stomach discomfort. it contains a combination of peppermint oil and menthol, which have carminative and digestive properties.',
+    'cyclopalm': 'cyclopalm is a combination medication used to relieve symptoms associated with irritable bowel syndrome (ibs), such as abdominal pain, cramps, bloating, and discomfort. it contains a combination of an antispasmodic and an antiflatulent agent.',
+    'aptivate': 'aptivate is a digestive enzyme supplement used to aid digestion and relieve symptoms such as bloating, gas, and indigestion. it contains a combination of enzymes that help break down carbohydrates, proteins, and fats in the digestive tract.',
+    'lubrijoint plus': 'lubrijoint plus is a nutritional supplement used to support joint health and reduce symptoms of osteoarthritis. it contains a combination of glucosamine, chondroitin, and methylsulfonylmethane (msm), which help maintain joint function and reduce inflammation.',
+    'acne treatment': 'acne treatment is a topical medication used to treat acne vulgaris. it contains active ingredients such as benzoyl peroxide, salicylic acid, or adapalene, which help reduce acne lesions, unclog pores, and prevent new acne formation.',
+    'eris': 'eris is an antihistamine medication used to relieve symptoms of allergies, such as sneezing, itching, watery eyes, and runny nose. it contains an active ingredient such as loratadine, cetirizine, or fexofenadine, which block the action of histamine in the body.',
+    'vinglyn': 'vinglyn is a medication used to relieve symptoms of motion sickness, such as nausea, vomiting, and dizziness. it contains an active ingredient such as dimenhydrinate or meclizine, which help prevent motion sickness by blocking signals to the brain.',
+    'vogs 0.3': 'vogs 0.3 is a topical medication used to treat fungal infections of the skin, such as athlete\'s foot, jock itch, and ringworm. it contains an antifungal agent such as clotrimazole, miconazole, or terbinafine, which help eliminate the fungus causing the infection.',
+    'rantac': 'rantac is a medication used to treat and prevent ulcers in the stomach and intestines, gastroesophageal reflux disease (gerd), and conditions that cause excess stomach acid production. it contains an active ingredient such as ranitidine, which reduces stomach acid production and relieves symptoms of heartburn and indigestion.'
  };
 
-// Helper function to capitalize the first letter of each word
-function capitalizeFirstLetter(str) {
-    return str.replace(/\b\w/g, function(char) {
-        return char.toUpperCase();
-    });
-}
 
 // Function to get medicine information
 function getMedicineInfo() {
@@ -1253,10 +1315,3 @@ function getMedicineInfo() {
 
     document.getElementById('medicineInput').value = ''; // Clear input box after searching
 }
-
-
-
-
-
-
-        

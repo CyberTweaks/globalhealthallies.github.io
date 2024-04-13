@@ -1,32 +1,44 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Medicine Information</title>
-        <link rel="stylesheet" href="medicineinfo.css">
-        <link href="../../helpbot/helpbot.css" rel="stylesheet">
-        <script src="medicineinfo.js" defer></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    </head>
-    <body>
-        <div class="container">
-            <h1>Medicine Information</h1>
-            <div id="medicineInfo">
-                <input type="text" id="medicineInput" class="medicine-input" placeholder="Enter medicine name...">
-                <button onclick="getMedicineInfo()" class="search-button">Search</button>
-                <div id="medicineDetails"></div>
-                <div class="black-strip">
-                    <a href="../about_us/about_us.html">About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to about us page -->
-                    <a href="../credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to login page -->
-                    <a href="../credentials/sign up/signup.html">Sign Up</a> <!-- Link to sign up page -->
-                </div>
-                    <div>
-                        <a href="#" class="chat-icon" onclick="toggleChatbot()">
-                            <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
-                        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedInfo Hub</title>
+    <link href="../../src/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="medicineinfo.css">
+    <link href="../../helpbot/helpbot.css" rel="stylesheet">
+    <script src="medicineinfo.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div class="black-strip">
+        <a href="../../index.html">Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../Pharmavogue/medicineinfo.html">MedInfo Hub&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../Medicine_Suggester/Medicine_suggester.html">MediMatch Pro&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../Hospital suggester/Hospital_suggester.html">HospiMatch Prime&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../BMI Calculator/BMI_calculator.html">BMI Calculator&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="..\about_us\about_us.html" >About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../credentials/login/login.html" >Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../credentials/sign up/signup.html">Sign Up&ensp;&ensp;</a>
+    </div>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="../../media/video/MedInfo.mp4" type="video/mp4">
+        <!-- Add additional source elements for different video formats (e.g., WebM, Ogg)-->
+    </video>
+    <div class="container">
+        <h1>Medicine Information</h1>
+        <h2>Please try to input the medicines in their medicinal names</h2>
+        <div id="medicineInfo">
+            <input type="text" id="medicineInput" class="medicine-input" placeholder="Enter medicine name...">
+            <button onclick="getMedicineInfo()" class="search-button">Search For Info</button>
+            <div id="medicineDetails"></div>
             
+            <div>
+                <a href="#" class="chat-icon" onclick="toggleChatbot()">
+                    <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+                </a>
+
                 <!-- Chatbot popup -->
                 <div id="chatbot-popup" class="chatbot-popup">
                     <div class="chat-messages" id="chat-messages">
@@ -40,6 +52,9 @@
                     <button onclick="sendMessage()" class="send-button">Send</button>
                     <script src="../../helpbot/helpbot.js"></script>
                 </div>
-                </div>
-    </body>
-    </html>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

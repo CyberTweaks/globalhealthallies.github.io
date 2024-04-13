@@ -9,15 +9,24 @@
     <link rel="stylesheet" href="../../src/main.css"> </link>
     <script src="database.js"></script>
     <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
+   
 </head>
 <body>
+    <video id="video-background" autoplay muted loop>
+        <source src="../../media/video/Medimatch.mp4" type="video/mp4">
+    </video>
     <div class="black-strip">
-        <a href="../about_us/about_us.html">About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to about us page -->
-        <a href="../credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a> <!-- Link to login page -->
-        <a href="../credentials/sign up/signup.html">Sign Up</a> <!-- Link to sign up page -->
+        <a href="../../index.html">Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../Pharmavogue/medicineinfo.html">MedInfo Hub&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../Medicine_Suggester/Medicine_suggester.html">MediMatch Pro&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../Hospital suggester/Hospital_suggester.html">HospiMatch Prime&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../BMI Calculator/BMI_calculator.html">BMI Calculator&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="..\about_us\about_us.html" >About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../credentials/login/login.html" >Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="../credentials/sign up/signup.html">Sign Up&ensp;&ensp;</a>
     </div>
     <div id="container">
-        <h1 style="text-align: center;">Remedy Suggester</h1>
+        <h1 style="text-align: center;">MediMatch Pro</h1>
         <br><br><br><br>
         <div id="symptomInputContainer">
             <label for="symptoms" >Enter your symptoms (comma-separated):</label>
@@ -26,6 +35,8 @@
             <button onclick="suggestMedicine()">Suggest Remedy</button>
             <div id="medicineSuggestion"></div>
         </div>
+        <body>
+          
         <a href="#" class="chat-icon" onclick="toggleChatbot()">
             <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
         </a>

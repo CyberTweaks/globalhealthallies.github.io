@@ -3,6 +3,32 @@ function suggestMedicine() {
   const symptomsInput = document.getElementById('symptoms').value.toLowerCase();
   // Split the symptoms by comma and trim whitespaces
   const symptoms = symptomsInput.split(',').map(symptom => symptom.trim());
+
+  // Check if symptoms are provided
+  if (!symptomsInput) {
+    document.getElementById('medicineSuggestion').textContent = "Please provide symptoms.";
+    return; // Exit the function early if no symptoms are provided
+  }
+
+  // Array to store suggested medicines
+  const suggestedMedicines = [];
+  
+  // Iterate through the symptoms and suggest corresponding medicines
+  symptoms.forEach(symptom => {
+    if (medicineMapping.hasOwnProperty(symptom)) {
+      suggestedMedicines.push(medicineMapping[symptom]);
+    }
+  });
+
+  // Display the suggested medicines or indicate no information available
+  const suggestionElement = document.getElementById('medicineSuggestion');
+  if (suggestedMedicines.length > 0) {
+    suggestionElement.textContent = "Suggested cures: " + suggestedMedicines.join(', ');
+  } else {
+    suggestionElement.textContent = "No information available for the given symptoms. It may be available in the future";
+  }
+}
+
   
   // Define a dictionary mapping symptoms to medicines with lowercase keys
   const medicineMapping = {
@@ -446,7 +472,11 @@ function suggestMedicine() {
     }
   });
   
-  // Display the suggested medicines
+  // Display the suggested medicines or indicate no information available
   const suggestionElement = document.getElementById('medicineSuggestion');
-  suggestionElement.textContent = "Suggested cures: " + suggestedMedicines.join(', ');
-}
+  if (suggestedMedicines.length > 0) {
+    suggestionElement.textContent = "Suggested cures: " + suggestedMedicines.join(', ');
+  } else {
+    suggestionElement.textContent = "No information available for the given symptoms.";
+  }
+  

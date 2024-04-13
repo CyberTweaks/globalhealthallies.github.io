@@ -1,18 +1,22 @@
 <!DOCTYPE html> <!-- Document type declaration -->
+
 <html lang="en"> <!-- Opening tag for HTML document with language attribute -->
+
 <head>
     <meta charset="UTF-8"> <!-- Character encoding -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
     <title>BMI Calculator</title> <!-- Title of the webpage -->
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
-    <link rel="stylesheet" href="../../src/main.css"> </link>
-    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link> <!-- Link to Google Fonts -->
+    <link rel="stylesheet" href="../../src/main.css"> </link> <!-- Link to another CSS file -->
+    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link> <!-- Link to CSS file for chatbot -->
+
 </head>
 
 
 <body>
-    <div class="black-strip">
+    <div class="black-strip"> <!-- Navigation bar -->
+        <!-- Navigation links -->
         <a href="../../index.html">Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
         <a href="../Pharmavogue/medicineinfo.html">MedInfo Hub&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
         <a href="../Medicine_Suggester/Medicine_suggester.html">MediMatch Pro&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
@@ -22,37 +26,48 @@
         <a href="../credentials/login/login.html" >Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
         <a href="../credentials/sign up/signup.html">Sign Up&ensp;&ensp;</a>
 
-    <a href="#" class="chat-icon" onclick="toggleChatbot()">
-        <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
-    </a>
+        <!-- Chatbot icon -->
+        <a href="#" class="chat-icon" onclick="toggleChatbot()">
+            <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+        </a>
 
-      <!-- Chatbot popup -->
-      <div id="chatbot-popup" class="chatbot-popup">
-        <div class="chat-messages" id="chat-messages">
-            <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+        <!-- Chatbot popup -->
+        <div id="chatbot-popup" class="chatbot-popup">
+            <!-- Chat messages -->
+            <div class="chat-messages" id="chat-messages">
+                <p class="greeting-message">Good day, how may I be of assistance to you?</p>
+            </div>
+            <!-- Options for chatbot -->
+            <div class="options">
+                <button class="option" onclick="selectOption(1)">What is BMI Calculator?</button>
+                <button class="option" onclick="selectOption(2)">What is MediMatch Pro?</button>
+            </div>
+            <!-- User input field and send button -->
+            <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
+            <button onclick="sendMessage()" class="send-button">Send</button>
+            <!-- JavaScript file for chatbot functionality -->
+            <script src="../../helpbot/helpbot.js"></script>
         </div>
-        <div class="options">
-            <button class="option" onclick="selectOption(1)">What is BMI Calculator?</button>
-            <button class="option" onclick="selectOption(2)">What is MediMatch Pro?</button>
-        </div>
-        <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
-        <button onclick="sendMessage()" class="send-button">Send</button>
-        <script src="../../helpbot/helpbot.js"></script>
     </div>
 
     <div class="container"> <!-- Container for BMI calculator -->
         <h2>BMI Calculator</h2> <!-- Heading -->
-        <label for="height">Height (cm):</label> <!-- Label for height input -->
-        <input type="number" id="height" placeholder="Enter your height in centimeters"> <!-- Height input field -->
-
-        <label for="weight">Weight (kg):</label> <!-- Label for weight input -->
-        <input type="number" id="weight" placeholder="Enter your weight in kilograms"> <!-- Weight input field -->
-
-        <button onclick="calculateBMI()">Calculate BMI</button> <!-- Button to trigger BMI calculation -->
-
-        <h2 id="result"></h2> <!-- Display BMI result -->
-
-        <script src="calculate.js"></script> <!-- Link to external JavaScript file for BMI calculation -->
+        <!-- Height input field -->
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter your height in centimeters">
+        
+        <!-- Weight input field -->
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter your weight in kilograms">
+        
+        <!-- Button to trigger BMI calculation -->
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        
+        <!-- Display BMI result -->
+        <h2 id="result"></h2>
+        
+        <!-- JavaScript file for BMI calculation -->
+        <script src="calculate.js"></script>
     </div>
 </body>
 </html>

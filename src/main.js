@@ -6,3 +6,13 @@ function redirectToBMIPage() {
     // Redirect to the login page
     window.location.href = "../sub-pages/BMI Calculator/BMI_calculator.html";
 }
+
+function redirectToMed_MatchPage() {
+    // Redirect to the login page
+    window.location.href = "../sub-pages/Medicine_Suggester/Medicine_suggester.html";
+}
+
+function redirectToMedInfoPage() {
+    // Redirect to the login page
+    window.location.href = "../sub-pages/Pharmavogue/medicineinfo.html";
+}

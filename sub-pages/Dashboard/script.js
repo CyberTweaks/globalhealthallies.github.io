@@ -30,4 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('medinfoBtn').addEventListener('click', function() {
     window.location.href = '../Pharmavogue/medicineinfo.html'; 
   });
+  // About us Hub Button
+  document.getElementById('aboutusBtn').addEventListener('click', function() {
+    window.location.href = '../about_us/about_us.html'; 
+  });
+  
 });
+

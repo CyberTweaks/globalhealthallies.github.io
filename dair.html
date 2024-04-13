@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Routine Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .routine {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Routine Exercises</h1>
+        <div class="routine">
+            <ul id="exercise-list">
+                <!-- Exercise list for the current day will be inserted here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const exercises = [
+            ["Push-ups", "Squats", "Plank", "Jumping Jacks", "Bicycle Crunches"],
+            ["Burpees", "Lunges", "Mountain Climbers", "Russian Twists", "High Knees"],
+            ["Tricep Dips", "Deadlifts", "Leg Raises", "Wall Sits", "Arm Circles"],
+            ["Skipping Rope", "Calf Raises", "Side Planks", "Reverse Crunches", "Bear Crawls"],
+            ["Bench Press", "Walking Lunges", "Flutter Kicks", "Jump Squats", "Box Jumps"]
+        ];
+
+        let currentDay = getCurrentDay();
+        displayDailyRoutine(currentDay);
+
+        setInterval(() => {
+            const newDay = getCurrentDay();
+            if (newDay !== currentDay) {
+                currentDay = newDay;
+                displayDailyRoutine(currentDay);
+            }
+        }, 1000 * 60 * 60); // Check every hour
+
+        function getCurrentDay() {
+            return new Date().getDay() % exercises.length;
+        }
+
+        function displayDailyRoutine(day) {
+            const exerciseList = document.getElementById('exercise-list');
+            exerciseList.innerHTML = '';
+            exercises[day].forEach(exercise => {
+                const listItem = document.createElement('li');
+                listItem.textContent = exercise;
+                exerciseList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

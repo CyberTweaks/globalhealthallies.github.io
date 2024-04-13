@@ -14,7 +14,7 @@ body {
   width: 60px;
   height: 34px;
   left: -269px;
-  top: 67%;
+  top: 47%;
 }
 
 .switch input {
@@ -45,10 +45,16 @@ body {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  background-image: url('../../media/images/sun.png'); /* Sun icon */
+  background-repeat: no-repeat;
+  background-size: 20px 20px; /* Adjust icon size */
+  background-position: center; /* Center the icon */
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #1ab5e9;
 }
 
 input:focus + .slider {
@@ -59,8 +65,33 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-image: url('../../media/images/moon.png'); /* Moon icon */
+  background-repeat: no-repeat;
+  background-size: 20px 20px; /* Adjust icon size */
+  background-position: center; /* Center the icon */
+  -webkit-transition: left .4s ease; /* Transition the position */
+  transition: left .4s ease;
+  animation: spin 0.5s ease forwards, slide 0.4s ease forwards; /* Animation for spin and slide */
+}
+/* Animation for spin */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start position */
+  }
+  100% {
+    transform: rotate(360deg); /* Full circle rotation */
+  }
 }
 
+/* Animation for slide */
+@keyframes slide {
+  0% {
+    left: 4px; /* Start position */
+  }
+  100% {
+    left: calc(100% - 30px); /* End position */
+  }
+}
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
@@ -112,7 +143,8 @@ input:checked + .slider:before {
 }
 
 .action-btn {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
+  font-weight: 520;
   display: block;
   width: 100%;
   padding: 10px;
@@ -183,10 +215,26 @@ header {
 }
 
 .dark-mode {
-  background-color: #202020;
+  background-color: #181818;
   color: #fff;
 }
+/* Dark mode styles */
 
+
+.dark-mode .menu li a {
+  color: #fff; /* White text color for menu links */
+}
+
+.dark-mode .actions .action-btn {
+  background-color: rgb(255, 255, 255); /* Dark background color for action buttons */
+  color: #000000; /* White text color for action buttons */
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.dark-mode .actions .action-btn:hover {
+  background-color: #646464; /* Darker background color on hover */
+}
 .dashboard {
   display: flex;
   height: 100vh;
@@ -197,14 +245,13 @@ header {
   background: linear-gradient(to right, rgb(0, 132, 255), rgb(0, 110, 255), rgb(0, 50, 212));
   color: #fff;
 }
-
+.dark-mode .sidebar {
+  background: linear-gradient(to right, #3d3d3d, #202020);
+  color: #fff;
+}
 .main-content {
   flex: 1;
   padding: 20px;
-}
-
-.sidebar.closed {
-  transform: translateX(-288px);
 }
 
 .sidebar .profile {
@@ -245,13 +292,6 @@ header {
   background-color: rgb(0, 81, 255);
 }
 
-.toggle-sidebar {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-}
 
 .content {
   padding: 20px;
@@ -262,4 +302,33 @@ header {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
+}
+.bottom-nav {
+  position: absolute; /* Position the logout list absolutely */
+  bottom: 20px; /* Adjust as needed */
+  left: -22px;
+  width: 12%;
+}
+
+.bottom-nav li {
+  list-style-type: none; /* Remove bullet point */
+}
+
+.bottom-nav a {
+  text-decoration: none; /* Remove underline */
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #ffffff; /* Change link color */
+  font-weight: 500; /* Make the text bold */
+  padding: 5px 10px; /* Add padding */
+  display: block; /* Make it a block element */
+  background-color: #202020;
+  border: 1px solid #333; /* No border */
+  border-radius: 5px; /* Add border radius */
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.bottom-nav a:hover {
+  background-color: rgb(88, 88, 88); /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
 }

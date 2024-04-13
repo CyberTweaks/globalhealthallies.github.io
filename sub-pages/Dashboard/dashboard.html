@@ -1,34 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Document type declaration -->
+<html lang="en"> <!-- Opening tag for HTML document with language attribute -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:wght@400;500;700&display=swap' rel='stylesheet'>
-    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
+    <title>Dashboard</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file for styling -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:wght@400;500;700&display=swap' rel='stylesheet'> <!-- Google Fonts -->
+    <link href="../../helpbot/helpbot.css" rel="stylesheet"></link> <!-- Link to external CSS file for chatbot -->
 </head>
 <body>
     
     <div class="dashboard">
-        <div class="sidebar active" id="sidebar"> <!-- Added the 'active' class here -->
-            <div class="profile">
-                <img src="..\..\media\images\png-transparent-head-the-dummy-avatar-man-tie-jacket-user.png">
-                <h2>Name on signup</h2>
+        <div class="sidebar" id="sidebar"> <!-- Sidebar section -->
+            <div class="profile"> <!-- Profile section -->
+                <img src="..\..\media\images\png-transparent-head-the-dummy-avatar-man-tie-jacket-user.png"> <!-- Profile image -->
+                <h2>Name on signup</h2> <!-- Name of the user -->
             </div>
-            <ul class="menu">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+              
+            <div class="actions"> <!-- Action buttons section -->
+                <button class="action-btn" id="bmiBtn">BMI Calculator</button> <!-- Button for BMI Calculator -->
+                <button class="action-btn" id="hospimatchBtn">Hospimatch Prime</button> <!-- Button for Hospimatch Prime -->
+                <button class="action-btn" id="medimatchBtn">Medimatch Pro</button> <!-- Button for Medimatch Pro -->
+                <button class="action-btn" id="medinfoBtn">MedInfo Hub</button> <!-- Button for MedInfo Hub -->
+                <button class="action-btn" id="aboutusBtn">About us</button> <!-- Button for About us -->
+            </div>
+            <!-- Logout list -->
+            <ul class="bottom-nav">
+                <li><a href="../../index.html">Logout</a></li> <!-- Logout link -->
             </ul>
-            <div class="actions">
-                <button class="action-btn" id="bmiBtn">BMI Calculator</button>
-                <button class="action-btn" id="hospimatchBtn">Hospimatch Prime</button>
-                <button class="action-btn" id="medimatchBtn">Medimatch Pro</button>
-                <button class="action-btn" id="medinfoBtn">MedInfo Hub</button>
-            </div>
         </div>
+        <div> <!-- Empty div -->
+        </div>
+        <!-- Dark mode toggle switch -->
         <label class="switch">
             <input type="checkbox" id="mode-toggle-btn">
             <span class="slider round"></span>
@@ -39,12 +42,13 @@
             </div>
         </div>
     </div>
+    <!-- Chatbot icon -->
     <a href="#" class="chat-icon" onclick="toggleChatbot()">
         <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
     </a>
-
-      <!-- Chatbot popup -->
-      <div id="chatbot-popup" class="chatbot-popup">
+  
+    <!-- Chatbot popup -->
+    <div id="chatbot-popup" class="chatbot-popup">
         <div class="chat-messages" id="chat-messages">
             <p class="greeting-message">Good day, how may I be of assistance to you?</p>
         </div>
@@ -56,6 +60,7 @@
         <button onclick="sendMessage()" class="send-button">Send</button>
         <script src="../../helpbot/helpbot.js"></script>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    
 </body>
 </html>

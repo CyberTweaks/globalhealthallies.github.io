@@ -9,6 +9,7 @@
     <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
 </head>
 <body>
+    
     <div class="dashboard">
         <div class="sidebar active" id="sidebar"> <!-- Added the 'active' class here -->
             <div class="profile">
@@ -25,12 +26,14 @@
                 <button class="action-btn" id="bmiBtn">BMI Calculator</button>
                 <button class="action-btn" id="hospimatchBtn">Hospimatch Prime</button>
                 <button class="action-btn" id="medimatchBtn">Medimatch Pro</button>
+                <button class="action-btn" id="medinfoBtn">MedInfo Hub</button>
             </div>
         </div>
-        <div class="main-content">
-            <header>
-                <button class="toggle-btn" id="mode-toggle-btn">Light Mode</button> <!-- Added the toggle button -->
-            </header>
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle-btn">
+            <span class="slider round"></span>
+        </label>
+           
             <div class="content">
                 
             </div>

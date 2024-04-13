@@ -1,28 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const modeToggleBtn = document.getElementById('mode-toggle-btn');
-  const body = document.body;
+const toggleBtn = document.getElementById('mode-toggle-btn');
 
-  // Toggle light/dark mode
-  modeToggleBtn.addEventListener('click', function() {
-    body.classList.toggle('light-mode');
-    body.classList.toggle('dark-mode');
-    modeToggleBtn.textContent = body.classList.contains('light-mode') ? 'Light Mode' : 'Dark Mode';
-  });
+toggleBtn.addEventListener('change', function() {
+    if(this.checked) {
+        // Dark mode activated
+        document.body.classList.add('dark-mode');
+    } else {
+        // Light mode activated
+        document.body.classList.remove('dark-mode');
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
   // BMI Calculator Button
   document.getElementById('bmiBtn').addEventListener('click', function() {
-    window.location.href = '../BMI Calculator/BMI_calculator.html'; // Replace 'bmi_calculator.html' with the URL of your BMI calculator page
+    window.location.href = '../BMI Calculator/BMI_calculator.html'; 
   });
 
   // Hospimatch Prime Button
   document.getElementById('hospimatchBtn').addEventListener('click', function() {
-    window.location.href = '../Hospital suggester/Hospital_suggester.html'; // Replace 'hospimatch_prime.html' with the URL of your Hospimatch Prime page
+    window.location.href = '../Hospital suggester/Hospital_suggester.html';
   });
 
   // Medimatch Pro Button
   document.getElementById('medimatchBtn').addEventListener('click', function() {
-    window.location.href = '../Medicine_Suggester/Medicine_Suggester.html'; // Replace 'medimatch_pro.html' with the URL of your Medimatch Pro page
+    window.location.href = '../Medicine_Suggester/Medicine_Suggester.html'; 
+  });
+
+  // MedInfo Hub Button
+  document.getElementById('medinfoBtn').addEventListener('click', function() {
+    window.location.href = '../Pharmavogue/medicineinfo.html'; 
   });
 });

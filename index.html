@@ -3,30 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Medical web</title>
+    <title>Global Health Allies</title>
     <link rel="stylesheet" href="./src/main.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href="./helpbot/helpbot.css" rel="stylesheet"></link>
 </head>
 
 <body>
+ 
     <div class="black-strip">
-        <a href="sub-pages\about_us\about_us.html">About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/credentials/sign up/signup.html">Sign Up</a>
+        <a href="./">&ensp;Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/Pharmavogue/medicineinfo.html">MedInfo Hub&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/Medicine_Suggester/Medicine_suggester.html">MediMatch Pro&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/Hospital suggester/Hospital_suggester.html">HospiMatch Prime&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/BMI Calculator/BMI_calculator.html">BMI Calculator&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="sub-pages\about_us\about_us.html" >About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/credentials/login/login.html" >Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+        <a href="./sub-pages/credentials/sign up/signup.html">Sign Up&ensp;&ensp;</a>
     </div>
-    <video id="video-background" autoplay loop muted>
-        <source src="./media/video/Reproduction.mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="box"></div>
-    <a href="./sub-pages/BMI Calculator/BMI_calculator.html" class="top-button">BMI Calculator</a>
-    <a href="./sub-pages/Medicine_Suggester/Medicine_suggester.html" class="center-button">MediMatch Pro</a>
+    <img src="./media/images/blood-1813410.jpg" class="med_strip"></img>
+    <div>
+        <img src="./media/images/BMI.jpg" alt="BMI" class="bmi_img">
+        <a class="bmi">
+            Utilize our BMI Calculator to quickly assess your Body Mass Index (BMI), enabling a comprehensive understanding of potential health risks associated with weight.
+            <button onclick="redirectToBMIPage()" type="text/html" class="bmi-button">Go to BMI Calculator</button>
+        </a>
+    </div>
+    
+    <a onclick="redirectToBMIPage()" class="center-button" type="text/html">MediMatch Pro</a>
     <a href="./sub-pages/Hospital suggester/Hospital_suggester.html" class="bottom-button">HospiMatch Prime</a>
-    <a href="./sub-pages/Pharmavogue/medicineinfo.html" class="last-button">Pharmavogue</a>
+    <a href="./sub-pages/Pharmavogue/medicineinfo.html" class="last-button">MedInfo Hub</a>
 
     <a href="#" class="chat-icon" onclick="toggleChatbot()">
-        <img src="media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+        <img src="./media/images/png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
     </a>
 
     <!-- Chatbot popup -->
@@ -41,6 +50,7 @@
         <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
         <button onclick="sendMessage()" class="send-button">Send</button>
         <script src="./helpbot/helpbot.js"></script>
+        <script src="./src/main.js"></script>
     </div>
     
 </body>

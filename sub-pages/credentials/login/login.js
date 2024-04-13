@@ -1,6 +1,6 @@
 function redirectToLoginPage() {
     // Redirect to the login page
-    window.location.href = "Webpages/sub-pages/Dashboard/dashboard.htmll";
+    window.location.href = "Webpages/sub-pages/Dashboard/dashboard.html";
 }
 
 document.addEventListener('DOMContentLoaded', function () {

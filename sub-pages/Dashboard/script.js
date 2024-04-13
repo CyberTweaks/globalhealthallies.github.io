@@ -36,4 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 });
+document.getElementById('open-window-btn').addEventListener('click', function() {
+  // Create a new window
+  const newWindow = window.open('', '_blank', 'width=300,height=200,top=100,left=100');
+  
+  // Write content to the new window
+  newWindow.document.write('<html><head><title>New Window</title></head><body><h1>New Window Content</h1><p>This is a new window opened by JavaScript.</p></body></html>');
+});
 

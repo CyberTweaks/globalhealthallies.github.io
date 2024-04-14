@@ -1,41 +1,22 @@
-/* Add this CSS at the end of your existing CSS file */
 
-/* Force landscape orientation only when in portrait mode */
-/* Add this CSS at the end of your existing CSS file */
-
-/* Force landscape orientation only when in portrait mode */
-/* Force landscape orientation only when in portrait mode */
-@media screen and (orientation: portrait) {
-    html, body {
-        width: 150%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: rotate(45deg) translateX(0) translateY(-35.5%);
-    }
-
-    #container {
-        width: 100vh;
-        height: 100vw;
-        overflow: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform-origin: top left;
-        transform: rotate(45deg);
-    }
+#landscape-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  font-size: 24px;
+  text-align: center;
+  z-index: 1000;
 }
 
+#landscape-popup p {
+  margin-top: 30vh; /* Adjust vertical position */
+}
 
-
-
-
-/* Rest of your CSS styles */
 
 
 .wrapper h1 {

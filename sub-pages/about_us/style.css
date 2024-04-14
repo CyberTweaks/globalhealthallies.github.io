@@ -101,19 +101,19 @@ h1 {
   display: inline-block;
   z-index: 1000;
   width: 100%;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   text-align: center;
-  margin: -1;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
-
 
 .black-strip a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   margin: 0 10px; /* Adjust margin as needed */
-  text-align: center;
 }
+
 /* Styling for the log*/
 #orientation-prompt {
   display: none;

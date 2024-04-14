@@ -76,33 +76,13 @@
         <script src="./helpbot/helpbot.js"></script>
             <script src="./src/main.js"></script>
         </div>
-        <div id="orientation-prompt" class="orientation-prompt">
+
+        <div id="landscape-popup">
             <p>Please rotate your device to landscape mode for the best experience.</p>
-        </div>
+          </div>
+          
     </div>
 </body>
-<script>// JavaScript to display orientation prompt
-    document.addEventListener("DOMContentLoaded", function () {
-        const orientationPrompt = document.getElementById("orientation-prompt");
-    
-        // Function to check and display the orientation prompt
-        function checkOrientation() {
-            if (window.innerWidth < window.innerHeight) {
-                orientationPrompt.style.display = "block";
-            } else {
-                orientationPrompt.style.display = "none";
-            }
-        }
-    
-        // Initial check
-        checkOrientation();
-    
-        // Check orientation on window resize
-        window.addEventListener("resize", checkOrientation);
-    });
-    
-
-    </script>
 </body>
 </body>
 </html>

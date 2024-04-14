@@ -35,10 +35,24 @@ body {
   
 /* CSS for black strip at the top */
 .black-strip {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    text-align: right;
+  background-color: #000;
+  padding: 10px 0; /* Adjust padding as needed */
+  text-align: center; /* Align text to the center */
+  font-family: 'Montserrat';
+  color: #fff;
+  position: fixed;
+  display: inline-block;
+  z-index: 1000;
+  width: 100%;
+}
+
+
+.black-strip a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px; /* Adjust margin as needed */
+  text-align: center;
+  right: 50%;
 }
 
 /* CSS for the wrapper section */
@@ -75,9 +89,4 @@ h1 {
   z-index: 1000;
 }
 
-/* Styling for the login and sign up links */
-.black-strip a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 20px; /* Adjust margin as needed */
-}
+/* Styling for the log

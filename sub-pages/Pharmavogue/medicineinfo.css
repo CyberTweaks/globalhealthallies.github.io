@@ -1,9 +1,10 @@
 @media screen and (orientation: landscape) {
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif
-}
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
 .video-background {
   position: fixed;
   top: 0;
@@ -188,24 +189,28 @@ h1 {
 
 .black-strip {
   background-color: #000;
-  padding: 10px 0; /* Adjust padding as needed */
-  font-family: 'Montserrat';
-  color: #fff;
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
   position: fixed;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
   width: 100%;
-  top: 0%;
-  left: 0%;
-  text-align: center;
-  margin: -1;
+  top: 0;
+  left: 0;
+  margin: 0;
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  white-space: nowrap; /* Prevent links from wrapping */
 }
-
 
 .black-strip a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  margin: 0 10px; /* Adjust margin as needed */
-  text-align: center;
+  margin: 0 5px; /* Adjust margin to bring links closer together */
+  font-size: 13px; /* Decrease font size slightly */
 }
+
+
 } 

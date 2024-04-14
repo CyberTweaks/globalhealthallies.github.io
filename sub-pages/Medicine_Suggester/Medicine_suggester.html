@@ -6,16 +6,9 @@
     <title>Remedy Suggester</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link><!--Link to Google Fonts -->
-    <link rel="stylesheet" href="../../src/main.css"> </link>
-    <script src="database.js"></script>
     <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
-   
 </head>
 <body>
-    <div id="orientation-prompt">
-        <p>Please rotate your device to landscape mode for the best experience.</p>
-    </div>
-
     <video id="video-background" autoplay muted loop preload>
         <source src="../../media/video/Medimatch.mp4" type="video/mp4">
     </video>
@@ -36,16 +29,13 @@
             <label for="symptoms" >Enter your symptoms (comma-separated):</label>
             <input type="text" id="symptoms">
         </div>
-            <button onclick="suggestMedicine()">Suggest Remedy</button>
-            <div id="medicineSuggestion"></div>
-        </div>
-        <body>
-          
-        <a href="#" class="chat-icon" onclick="toggleChatbot()">
-            <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
-        </a>
-    
-         <!-- Chatbot popup -->
+        <button onclick="suggestMedicine()">Suggest Remedy</button>
+        <div id="medicineSuggestion"></div>
+    </div>
+    <a href="#" class="chat-icon" onclick="toggleChatbot()">
+        <img src="..\..\media\images\png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon">
+    </a>
+    <!-- Chatbot popup -->
     <div id="chatbot-popup" class="chatbot-popup">
         <div class="chat-messages" id="chat-messages">
             <p class="greeting-message">Good day, how may I be of assistance to you?</p>
@@ -56,6 +46,14 @@
         </div>
         <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
         <button onclick="sendMessage()" class="send-button">Send</button>
-            <script src="../../helpbot/helpbot.js"></script>
-    </body>
+    </div>
+    <div id="landscape-popup" class="landscape-popup">
+        <p>Please rotate your device to landscape mode for the best experience.</p>
+    </div>
+    
+    <script src="database.js"></script>
+    <script src="../../helpbot/helpbot.js"></script>
+    <script>
+    </script>
+</body>
 </html>

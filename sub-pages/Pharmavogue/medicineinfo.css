@@ -1,4 +1,3 @@
-@media screen and (orientation: landscape) {
   body, html {
     margin: 0;
     padding: 0;
@@ -212,5 +211,20 @@ h1 {
   font-size: 13px; /* Decrease font size slightly */
 }
 
+#landscape-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  font-size: 24px;
+  text-align: center;
+  z-index: 1000;
+}
 
-} 
+#landscape-popup p {
+  margin-top: 30vh; /* Adjust vertical position */
+}

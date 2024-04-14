@@ -8,12 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
   <link href="../../helpbot/helpbot.css" rel="stylesheet"></link>
 </head>
-  <body>
-    <div id="orientation-prompt">
-      <p>Please rotate your device to landscape mode for the best experience.</p>
-  </div>
-
-    <!-- Black strip at the top with login and signup redirect links -->
+  <body>    <!-- Black strip at the top with login and signup redirect links -->
     <div class="container">
       <div class="black-strip">
         <a href="../../index.html">Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
@@ -61,7 +56,12 @@
       </div>
       <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
       <button onclick="sendMessage()" class="send-button">Send</button>
+
+      <div id="landscape-popup" class="landscape-popup">
+        <p>Please rotate your device to landscape mode for the best experience.</p>
+      </div>
+    
     <script src="../../helpbot/helpbot.js"></script>
-    <script src="style.css"></script>
+    <script src="./style.js"></script>
   </body>
 </html>

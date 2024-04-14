@@ -47,3 +47,4 @@ function showOrientationPrompt() {
 // Show the orientation prompt initially and on window resize
 window.addEventListener('resize', showOrientationPrompt);
 showOrientationPrompt();
+

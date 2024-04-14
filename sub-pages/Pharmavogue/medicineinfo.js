@@ -1292,8 +1292,8 @@ const medicineDatabase = {
     'rantac': 'rantac is a medication used to treat and prevent ulcers in the stomach and intestines, gastroesophageal reflux disease (gerd), and conditions that cause excess stomach acid production. it contains an active ingredient such as ranitidine, which reduces stomach acid production and relieves symptoms of heartburn and indigestion.'
  };
 // Function to get medicine information
-function getMedicineInfo() {
-    const medicineInput = document.getElementById('medicineInput').value.trim().toLowerCase(); // Convert input to lowercase
+function getMedicineInfo(){
+    const medicineInput = document.getElementById('medicineInput').toLowerCase(); // Convert input to lowercase
     const medicineDetails = document.getElementById('medicineDetails');
 
     if (medicineInput in medicineDatabase) {

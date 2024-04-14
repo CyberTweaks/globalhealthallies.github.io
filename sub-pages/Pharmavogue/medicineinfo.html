@@ -7,7 +7,7 @@
     <link href="../../src/main.css" rel="stylesheet">
     <link rel="stylesheet" href="medicineinfo.css">
     <link href="../../helpbot/helpbot.css" rel="stylesheet">
-    <script src="medicineinfo.js" defer></script>
+    <script src="medicineinfo.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -30,9 +30,10 @@
         <h1>Medicine Information</h1>
         <h2>Please try to input the medicines in their medicinal names</h2>
         <div id="medicineInfo">
-            <input type="text" id="medicineInput" placeholder="Enter medicine name...">
-            <button onclick="getMedicineInfo()">Search</button>
+            <input type="text" id="medicineInput" class="medicine-input" placeholder="Enter medicine name...">
+            <button onclick="getMedicineInfo()" class="search-button">Search For Info</button>
             <div id="medicineDetails"></div>
+            sc
             
             <div>
                 <a href="#" class="chat-icon" onclick="toggleChatbot()">

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Global Health Allies</title>
     <link rel="stylesheet" href="./src/main.css">
@@ -10,47 +11,49 @@
 </head>
 
 <body>
- 
-    <div class="black-strip">
-        <a href="./">&ensp;Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/Pharmavogue/medicineinfo.html">MedInfo Hub&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/Medicine_Suggester/Medicine_suggester.html">MediMatch Pro&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/Hospital suggester/Hospital_suggester.html">HospiMatch Prime&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/BMI Calculator/BMI_calculator.html">BMI Calculator&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="sub-pages\about_us\about_us.html" >About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/credentials/login/login.html" >Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
-        <a href="./sub-pages/credentials/sign up/signup.html">Sign Up&ensp;&ensp;</a>
+    <div class="container">
+        <div class="black-strip">
+            <a href="./">&ensp;Home&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="./sub-pages/Pharmavogue/medicineinfo.html">MedInfo Hub&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="./sub-pages/Medicine_Suggester/Medicine_suggester.html">MediMatch Pro&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="./sub-pages/Hospital suggester/Hospital_suggester.html">HospiMatch Prime&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="./sub-pages/BMI Calculator/BMI_calculator.html">BMI Calculator&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="sub-pages\about_us\about_us.html">About us&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="./sub-pages/credentials/login/login.html">Login&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;|</a>
+            <a href="./sub-pages/credentials/sign up/signup.html">Sign Up&ensp;&ensp;</a>
+        </div>
+        <img src="./media/images/blood-1813410.jpg" class="med_strip" preload></img>
+        <div class="content">
+            <div>
+                <img src="./media/images/BMI.jpg" alt="BMI" class="bmi_img" preload>
+                <div class="bmi">
+                    Utilize our BMI Calculator to quickly assess your Body Mass Index (BMI), enabling a comprehensive understanding of potential health risks associated with weight.
+                    <button onclick="redirectToBMIPage()" type="text/html" class="bmi-button">Go to BMI Calculator</button>
+                </div>
+            </div>
+            <div>
+                <img src="./media/images/medimatch pro.jpg" alt="Medicines" class="med_match_pic" preload>
+                <div class="med_match">
+                    Find your perfect home remedy match with MediMatch Pro, offering personalized recommendations based on your symptoms for effective suggestions.
+                </div>
+                <button onclick="redirectToMed_MatchPage()" class="med_match_button" type="text/html">Go to MediMatch Pro</button>
+            </div>
+            <div>
+                <img src="./media/images/MedInfo_hub.jpg" alt="Medicines" class="med_info_pic" preload>
+                <div class="med_info">
+                    MedInfo Hub provides detailed insights into the functions and uses of medications, helping you understand their roles in treating various health conditions.
+                </div>
+                <button onclick="redirectToMedInfoPage()" class="med_info_button">Go to MedInfo Hub</button>
+            </div>
+            <div>
+                <img src="./media/images/hospimatch.jpg" alt="" class="hospimatch_img" preload>
+                <div class="hospimatch">
+                    Stuck in an emergency and don't know where to turn? Let HospiMatch Prime be your lifesaver! Quickly discover nearby hospitals with ease, ensuring you get the care you need, fast.
+                </div>
+                <button onclick="redirectToHospiMatchPage()" class="hospimatch_button">Go to HospiMatch Prime</button>
+            </div>
+        </div>
     </div>
-    <img src="./media/images/blood-1813410.jpg" class="med_strip" preload></img>
-    <div>
-        <img src="./media/images/BMI.jpg" alt="BMI" class="bmi_img" preload>
-        <a class="bmi">
-            Utilize our BMI Calculator to quickly assess your Body Mass Index (BMI), enabling a comprehensive understanding of potential health risks associated with weight.
-            <button onclick="redirectToBMIPage()" type="text/html" class="bmi-button">Go to BMI Calculator</button>
-        </a>
-    </div>
-    <div>
-        <img src="./media/images/medimatch pro.jpg" alt="Medicines" class="med_match_pic" preload>
-        <a class="med_match"><br>
-            Find your perfect home remedy match with MediMatch Pro, offering personalized recommendations based on your symptoms for effective suggestions.
-        </a>
-        <button onclick="redirectToMed_MatchPage()" class="med_match_button" type="text/html">Go to MediMatch Pro</button>
-    </div>
-    <div>
-        <img src="./media/images/MedInfo_hub.jpg" alt="Medicines" class="med_info_pic" preload>
-        <a class="med_info">
-            MedInfo Hub provides detailed insights into the functions and uses of medications, helping you understand their roles in treating various health conditions.
-        </a>
-        <button onclick="redirectToMedInfoPage()" class="med_info_button">Go to MedInfo Hub</button>
-    </div>
-    <br>
-    <br>
-    <div>
-        <img src="./media/images/hospimatch.jpg" alt="" class="hospimatch_img" preload>
-        <a class="hospimatch">Stuck in an emergency and don't know where to turn? Let HospiMatch Prime be your lifesaver! Quickly discover nearby hospitals with ease, ensuring you get the care you need, fast"</a>
-        <button onclick="redirectToHospiMatchPage()" class="hospimatch_button">Go to HospiMatch Prime</button>
-    </div>
-
     <a href="#" class="chat-icon" onclick="toggleChatbot()">
         <img src="./media/images/png-clipart-computer-icons-desktop-chatbot-icon-blue-angle.png" alt="Chatbot Icon" preload>
     </a>
@@ -69,7 +72,7 @@
         <script src="./helpbot/helpbot.js"></script>
         <script src="./src/main.js"></script>
     </div>
-    
+
 </body>
 
 </html>

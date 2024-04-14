@@ -1,9 +1,3 @@
-// Helper function to capitalize the first letter of each word
-function capitalizeFirstLetter(str) {
-    return str.replace(/\b\w/g, function(char) {
-        return char.toUpperCase();
-    });
-}
 
 // Medicine database object
 const medicineDatabase = {
@@ -1297,8 +1291,6 @@ const medicineDatabase = {
     'vogs 0.3': 'vogs 0.3 is a topical medication used to treat fungal infections of the skin, such as athlete\'s foot, jock itch, and ringworm. it contains an antifungal agent such as clotrimazole, miconazole, or terbinafine, which help eliminate the fungus causing the infection.',
     'rantac': 'rantac is a medication used to treat and prevent ulcers in the stomach and intestines, gastroesophageal reflux disease (gerd), and conditions that cause excess stomach acid production. it contains an active ingredient such as ranitidine, which reduces stomach acid production and relieves symptoms of heartburn and indigestion.'
  };
-
-
 // Function to get medicine information
 function getMedicineInfo() {
     const medicineInput = document.getElementById('medicineInput').value.trim().toLowerCase(); // Convert input to lowercase
@@ -1306,12 +1298,15 @@ function getMedicineInfo() {
 
     if (medicineInput in medicineDatabase) {
         const medicineInfo = medicineDatabase[medicineInput];
-        const capitalizedMedicineInput = capitalizeFirstLetter(medicineInput);
-        const capitalizedMedicineInfo = capitalizeFirstLetter(medicineInfo);
-        medicineDetails.innerHTML = `<strong>${capitalizedMedicineInput}:</strong> ${capitalizedMedicineInfo}`;
+        // Capitalize the first letter of the medicine name
+        const capitalizedMedicineInput = medicineInput.charAt(0).toUpperCase() + medicineInput.slice(1);
+        medicineDetails.innerHTML = `<strong>${capitalizedMedicineInput}:</strong> ${medicineInfo}`;
     } else {
-        medicineDetails.innerHTML = `No information available for "${capitalizeFirstLetter(medicineInput)}".`;
+        // Capitalize the first letter of the medicine name
+        const capitalizedMedicineInput = medicineInput.charAt(0).toUpperCase() + medicineInput.slice(1);
+        medicineDetails.innerHTML = `No information available for "${capitalizedMedicineInput}".`;
     }
 
-    document.getElementById('medicineInput').value = ''; // Clear input box after searching
+    // Clear input box after searching
+    document.getElementById('medicineInput').value = '';
 }

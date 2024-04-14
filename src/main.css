@@ -452,4 +452,13 @@ body {
   justify-content: center;
   z-index: 9999;
 }
+
+#orientation-prompt { display: none; }
+    @media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+        #orientation-prompt { display:block; }
+    }
+    @media only screen and (orientation:landscape){
+        #orientaition-prompt { display:none; }
+    }
 }

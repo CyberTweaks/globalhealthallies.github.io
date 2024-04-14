@@ -1,3 +1,5 @@
+@media screen and (orientation: landscape) {
+
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
@@ -257,3 +259,4 @@ div .dot {
   color: #666666;
 }
 
+}

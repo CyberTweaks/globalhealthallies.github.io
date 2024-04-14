@@ -1,3 +1,5 @@
+@media screen and (orientation: landscape) {
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -345,4 +347,5 @@ header {
   margin-left: 550%;
   height: 30%;
   width: 190%
+}
 }

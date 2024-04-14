@@ -1,3 +1,5 @@
+@media screen and (orientation: landscape) {
+
 body {
   margin: 0;
   padding: 0;
@@ -243,4 +245,5 @@ label[for="symptoms"] {
   background: linear-gradient(135deg, #368ed6, #1578c9, #0855a1); /* Gradient background */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
   transition: background 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
 }

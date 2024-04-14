@@ -8,7 +8,7 @@
       width: 80%; /* Adjust width as needed */
       margin: 2rem auto; /* Center the container */
   }
-}
+
 
 /* Portrait orientation styling */
 @media screen and (orientation: portrait) {
@@ -114,4 +114,5 @@ h1 {
   margin: 0 10px; /* Adjust margin as needed */
   text-align: center;
 }
-/* Styling for the log
+/* Styling for the log*/
+}

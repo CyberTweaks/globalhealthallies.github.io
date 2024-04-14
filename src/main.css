@@ -319,3 +319,46 @@ body, html {
   color: #ffffff;
   transition: ease-in-out 0.2s;
 }
+
+.hospimatch{
+  position: relative;
+  font-size: 32px;
+  font-family: 'Montserrat';
+  text-align: left;
+  width: 60%; /* Adjust width as needed */
+  float: right; /* Add float left */
+  top: -45%;
+  z-index: 100;
+  left: 1% ;
+}
+
+.hospimatch_button{
+  position: relative;
+  top: calc(15vh - 150px); /* 50% of viewport height + half of med_match_pic height */
+  right: -85%; /* Align to the right */
+  padding: 20px 10px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px; 
+  background-color: #f1efe9; 
+  color: #fcb903; 
+  border: 1px solid #fcb903 ; 
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hospimatch_button:hover{
+  background-color: #fcb903; 
+  color: #ffffff;
+  transition: ease-in-out 0.2s;
+}
+
+.hospimatch_img{
+  position: relative;
+  top: 40%;
+  border: 1px solid black;
+  z-index: -100;
+  width: 35%;
+  left: 3%;
+  height: auto;
+}

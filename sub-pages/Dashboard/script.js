@@ -36,18 +36,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 });
-document.getElementById('open-window-btn').addEventListener('click', function() {
-  // Create a new window
-  const newWindow = window.open('', '_blank', 'width=300,height=200,top=100,left=100');
-  
-  // Generate content for the new window using a list
-  const listItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
-  let content = '<html><head><title>New Window</title></head><body><h1>List in New Window</h1><ul>';
-  listItems.forEach(item => {
-      content += `<li>${item}</li>`;
-  });
-  content += '</ul></body></html>';
-
-  // Write content to the new window
-  newWindow.document.write(content);
-});

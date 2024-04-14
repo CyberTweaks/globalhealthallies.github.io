@@ -11,8 +11,8 @@ body {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3%;
+  height: 3.57%;
   left: -269px;
   top: 47%;
 }
@@ -332,13 +332,17 @@ header {
   background-color: rgb(88, 88, 88); /* Change background color on hover */
   color: #fff; /* Change text color on hover */
 }
-.container {
-  text-align: center;
-  margin-top: 50px;
+/* Styles for the new area */
+.new-area {
+  width: 83%; /* Adjust width as needed */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  margin-left: -100px; /* Adjust the margin-left to move the area towards the left */
 }
-
-#open-window-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+.dail{
+  margin-top: -254px;
+  margin-left: 550%;
+  height: 30%;
+  width: 190%
 }

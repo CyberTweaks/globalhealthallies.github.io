@@ -287,8 +287,8 @@ function getResponse(message) {
     else if (message.includes("good work")|| message.includes("good job")|| message.includes("very well"))
     return "Thanks you! I am glad I could assist you.";
 
-    else if (message.includes("pharmavogue") || message.includes("pharma vogue") || message.includes("pharmavouge") || message.includes("pharmavoge") || message.includes("pharmavoge") || message.includes("pharma vogue") || message.includes("pharmavougue") || message.includes("pharmavouge") || message.includes("pharma vouge") || message.includes("farmavogue")) 
-        return "Pharmavogue is a sophisticated tool developed by our team. It allows users to input the name of a medicine and receive comprehensive information regarding its mechanisms of action and usage.";
+    else if (message.includes("medinfo hub") || message.includes("medinfo")) 
+        return "MedInfo Hub is a sophisticated tool developed by our team. It allows users to input the name of a medicine and receive comprehensive information regarding its mechanisms of action and usage.";
     
     else
         return "I apologize, but I'm not equipped to assist with that inquiry.";

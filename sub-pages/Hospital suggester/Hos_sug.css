@@ -21,19 +21,32 @@ h2 {
 
 
 .black-strip {
-    background-color: #000;
-    padding: 10px 0; /* Adjust padding as needed */
-    text-align: right;
-    font-family: 'Montserrat';
-    color: #fff;
+  background-color: #000;
+  padding: 10px 0; /* Adjust padding as needed */
+  text-align: right;
+  font-family: 'Montserrat';
+  color: #fff;
+  position: fixed;
+  width: 100%;
 }
-  
-  /* Styling for the login and sign up links */
-  .black-strip a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px; /* Adjust margin as needed */
-  }
+
+.black-strip {
+  background-color: #000;
+  padding: 10px 0; /* Adjust padding as needed */
+  text-align: right;
+  font-family: 'Montserrat';
+  color: #fff;
+  position: fixed;
+  display: inline-block;
+  z-index: 1000;
+  left: 0%;
+}
+
+.black-strip a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px; /* Adjust margin as needed */
+}
 
 /* Center the button horizontally */
 .find-hospital-btn {

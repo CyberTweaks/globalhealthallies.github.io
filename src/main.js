@@ -16,3 +16,8 @@ function redirectToMedInfoPage() {
     // Redirect to the login page
     window.location.href = "../sub-pages/Pharmavogue/medicineinfo.html";
 }
+
+function redirectToHospiMatchPage() {
+    // Redirect to the login page
+    window.location.href = "../sub-pages/Hospital suggester/Hospital_suggester.html";
+}

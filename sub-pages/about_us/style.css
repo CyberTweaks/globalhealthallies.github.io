@@ -1,3 +1,38 @@
+/* Landscape orientation styling */
+@media screen and (orientation: landscape) {
+  body {
+      display: block; /* Change to block display */
+  }
+
+  .container {
+      width: 80%; /* Adjust width as needed */
+      margin: 2rem auto; /* Center the container */
+  }
+}
+
+/* Portrait orientation styling */
+@media screen and (orientation: portrait) {
+  body {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+  }
+
+  .container {
+      width: 470px;
+      max-width: 470px;
+      margin: 1rem;
+      padding: 2rem;
+      overflow: hidden;
+      display: block;
+      height: 360px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+      border-radius: var(--border-radius);
+      background: #ffffff;
+  }
+}
+
+
 body {
     font-family: 'Montserrat', sans-serif; /* Use Montserrat font for the entire body */
     font-size: 16px; /* Set a base font size */

@@ -11,10 +11,6 @@ function showOrientationPrompt() {
     }
 }
 
-// Show the orientation prompt initially and on window resize
-window.addEventListener('resize', showOrientationPrompt);
-showOrientationPrompt();
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const landscapePopup = document.getElementById("landscape-popup");
@@ -23,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function toggleLandscapePopup() {
         if (window.innerWidth < window.innerHeight) {
             landscapePopup.style.display = "block";
+            // Set a higher z-index for the landscape popup
+            landscapePopup.style.zIndex = "1001";
         } else {
             landscapePopup.style.display = "none";
         }

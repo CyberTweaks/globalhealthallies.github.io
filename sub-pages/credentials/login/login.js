@@ -72,3 +72,21 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
   
+
+  submitButton.addEventListener("click", function() {
+    const email = emailInput.value;
+    const password = passwordInput.value;
+  
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Login successful
+        window.alert("Success! Welcome back!");
+        // Redirect to the dashboard
+        window.location.href = "../../Dashboard/dashboard.html";
+      })
+      .catch((error) => {
+        // Handle errors
+        window.alert("Error occurred. Try again.");
+      });
+  });
+  

@@ -191,10 +191,10 @@ h1, h2 {
     ["Push-ups", "Squats", "Plank", "Jumping Jacks", "Bicycle Crunches"],
     // Add more exercises here if needed
 ];
-console.log(exercises);
-
 let currentDay = getCurrentDay();
 let previousExercises = []; // Store previously displayed exercises
+let displayNewExercises = true; // Variable to control whether to display new exercises or repeat from previous day
+
 displayDailyRoutine(currentDay);
 
 setInterval(() => {
@@ -213,8 +213,14 @@ function displayDailyRoutine(day) {
     const exerciseList = document.getElementById('exercise-list');
     exerciseList.innerHTML = '';
 
-    // Get 5 new exercises for the current day
-    const newExercises = exercises[day].filter(exercise => !previousExercises.includes(exercise)).slice(0, 5);
+    // Get exercises for the current day based on displayNewExercises flag
+    let newExercises = [];
+    if (displayNewExercises) {
+        newExercises = exercises[day].filter(exercise => !previousExercises.includes(exercise)).slice(0, 5);
+    } else {
+        // Repeat exercises from the previous day
+        newExercises = previousExercises.slice(0, 5);
+    }
 
     // Add new exercises to the list
     newExercises.forEach(exercise => {
@@ -224,12 +230,10 @@ function displayDailyRoutine(day) {
     });
 
     // Update previousExercises with the newly displayed exercises
-    previousExercises = previousExercises.concat(newExercises);
+    previousExercises = newExercises;
 
-    // If the length of previousExercises exceeds 5, remove the oldest exercises
-    if (previousExercises.length > 5) {
-        previousExercises = previousExercises.slice(previousExercises.length - 5);
-    }
+    // Update displayNewExercises flag every other day
+    displayNewExercises = !displayNewExercises;
 
     // Apply fade-in animation to headings
     document.querySelector('h1').style.animation = 'fadeIn 1s ease forwards';

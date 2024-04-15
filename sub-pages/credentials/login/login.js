@@ -3,6 +3,14 @@ function redirectToLoginPage() {
     window.location.href = "Webpages/sub-pages/Dashboard/dashboard.html";
 }
 
+function setFornMessage(formElement, type, message){
+    const messageElement = formElement.querySelector(".form__message");
+
+    messageElement.textContent = message;
+    messageElement.classList.remove("form__message--success", "form message--error");
+    messageElement.classList.add('form__message--${type}');
+}
+    setFornMessage(loginForm, "success", "You're logged in!")
 document.addEventListener('DOMContentLoaded', function () {
     // Function to load login page content
     function loadLoginPage() {
@@ -14,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="form__input-group">
                 <input type="password" class="form__input " placeholder="Password" autofocus>
             </div>
-            <button class="form__button" type="button" id="loginButton">Login</button>
+            <button class="form__button" type="button" id="loginButton">Submit</button>
             <p class="form__text">
                 <a href="../sign up/signup.html" class="form__link" id="linkCreateAccount">Don't have an account? Create account.</a>
             </p>`;
@@ -45,5 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Check orientation on window resize
     window.addEventListener("resize", toggleLandscapePopup);
+  });
+  
+  submitButton.addEventListener("click", function() {
+    // Collect email and password inputs
+    const email = emailInput.value;
+    const password = passwordInput.value;
+  
+    // Sign in user with email and password
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Login successful
+        window.alert("Success! Welcome back!");
+      })
+      .catch((error) => {
+        // Handle errors
+        window.alert("Error occurred. Try again.");
+      });
   });
   

@@ -104,11 +104,7 @@ function getResponse(message) {
     return "MediMatch is a tool with a database of 400+ illness and symptoms that analyzes them to provide personalized treatment and remedies recommendations."+"\nPlease note that while our platform offers valuable insights, it is important to consult a healthcare professional for accurate diagnosis and treatment.";
 
     else if (message.includes("owner") || message.includes("owners") || message.includes("operators") || message.includes("developers"))
-        return `Our platform is owned, developed, and operated by a team of coders: 
-                1) Mst. Vishvajeet
-                2) Mst. Zohaib
-                3) Mst. Aryan
-                Dedicated to improving patient outcomes and enhancing access to quality care.`;
+        return `Our platform is owned, developed, and operated by a team of coders: Mst. Aryan Agarwal, Md. Zohaib Alam, Mst. Vishvajeet Singh Rajpurohit. Dedicated to improving patient outcomes and enhancing access to quality care.`;
 
     else if (message.includes("vaccination")) 
         return "Vaccination is a safe and effective way to protect against infectious diseases. Stay up-to-date with recommended vaccines to safeguard your health and prevent the spread of illness.";

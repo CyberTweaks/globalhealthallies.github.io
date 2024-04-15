@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Check orientation on window resize
   window.addEventListener("resize", toggleLandscapePopup);
+
+  // Add event listener for Enter key press in the symptoms input
+  document.getElementById('symptoms').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      suggestMedicine();
+    }
+  });
 });
 
 function suggestMedicine() {

@@ -7,6 +7,13 @@ body {
   display: flex;
   height: 100vh;
 }
+/* CSS to remove button white background */
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0; /* Remove padding */
+}
+
 /* Toggle switch styles */
 .switch {
   position: relative;
@@ -333,12 +340,27 @@ header {
   color: #fff; /* Change text color on hover */
 }
 
-.dail{
-  margin-top: -90px;
-  margin-left: 100%;
-  height: 270px;
-  width: 190%
-}
-/* Overlay styles */
-/* Overlay styles */
 
+/* Media query for laptop screen sizes */
+@media (min-width: 1024px) {
+  .switch {
+    width: 60px;
+    height: 34px;
+    left: 0;
+    top: 0;
+  }
+
+  .dail {
+    margin-top: -150px;
+    margin-left: 100%;
+    margin-bottom: -120px;
+    height: 270px;
+    width: 190%
+  }
+}
+ /* Add this CSS style to fix the position of the toggle switch */
+ .toggle-wrapper {
+  height: 50px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+}

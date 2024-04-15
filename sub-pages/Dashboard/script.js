@@ -36,3 +36,29 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 });
+  // Get references to the button and the embedded content
+  const button = document.getElementById('dailexBtn');
+  const embedContent = document.querySelector('.dail');
+
+  // Function to show the embedded content
+  function showEmbedContent() {
+    embedContent.style.display = 'block';
+  }
+
+  // Function to hide the embedded content
+  function hideEmbedContent() {
+    embedContent.style.display = 'none';
+  }
+
+  // Event listener for button click
+  button.addEventListener('click', function() {
+    // Toggle the display of the embedded content
+    if (embedContent.style.display === 'none') {
+      showEmbedContent();
+    } else {
+      hideEmbedContent();
+    }
+  });
+
+  // Hide the embedded content initially
+  hideEmbedContent();

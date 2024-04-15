@@ -47,3 +47,38 @@ createacctbtn.addEventListener("click", function() {
       window.alert("Error occurred. Try again.");
     });
 });
+
+createacctbtn.addEventListener("click", function() {
+  var isVerified = true;
+
+  const signupEmail = signupEmailIn.value;
+  const confirmSignupEmail = confirmSignupEmailIn.value;
+  if(signupEmail != confirmSignupEmail) {
+      window.alert("Email fields do not match. Try again.");
+      isVerified = false;
+  }
+
+  const signupPassword = signupPasswordIn.value;
+  const confirmSignUpPassword = confirmSignUpPasswordIn.value;
+  if(signupPassword != confirmSignUpPassword) {
+      window.alert("Password fields do not match. Try again.");
+      isVerified = false;
+  }
+  
+  if(signupEmail == '' || confirmSignupEmail == '' || signupPassword == '' || confirmSignUpPassword == '') {
+    window.alert("Please fill out all required fields.");
+    isVerified = false;
+  }
+  
+  if(isVerified) {
+    firebase.auth().createUserWithEmailAndPassword(signupEmail, signupPassword)
+      .then((userCredential) => {
+        // Account creation successful
+        window.alert("Success! Account created.");
+      })
+      .catch((error) => {
+        // Handle errors
+        window.alert("Error occurred. Try again.");
+      });
+  }
+});

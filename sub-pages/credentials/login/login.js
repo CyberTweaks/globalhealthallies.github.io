@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.alert("Error occurred. Try again.");
       });
   });
-  
-
   submitButton.addEventListener("click", function() {
     const email = emailInput.value;
     const password = passwordInput.value;
@@ -89,4 +87,5 @@ document.addEventListener("DOMContentLoaded", function() {
         window.alert("Error occurred. Try again.");
       });
   });
+  
   

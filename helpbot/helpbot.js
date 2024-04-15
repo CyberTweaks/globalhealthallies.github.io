@@ -83,10 +83,7 @@ document.getElementById('user-input').addEventListener('keypress', function(even
 
 // Function to get chatbot response based on user input
 function getResponse(message) {
-    if (message.includes("signup") || message.includes("sign") || message.includes("login") || message.includes("logging"))
-        return "Signing up on our platform allows you to access exclusive features such as personalized health recommendations, a daily exercise routine maker, and medical record management.";
-
-     else if (message.includes("webpage") || message.includes("web") || message.includes(" website ") || message.includes("what is this webpage about") || message.includes("what is this website about"))
+    if (message.includes("webpage") || message.includes("web") || message.includes(" website ") || message.includes("what is this webpage about") || message.includes("what is this website about"))
         return ("Our medical webpage provides a centralized hub for accessing essential healthcare resources and tools. From BMI calculators to hospital matching services, it offers valuable functionalities catering to both healthcare professionals and patients. With its focus on convenience and efficiency, the platform aims to enhance the overall healthcare experience and promote better health outcomes.");
 
     else if (message.includes("motive"))

@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.style.overflowY = "scroll";
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const landscapePopup = document.getElementById("landscape-popup");

@@ -15,6 +15,29 @@
 
 
 <body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD6cgU1XBKUupnhtHRp2tUFhlQZn9tfWfE",
+          authDomain: "globalhealthallies.firebaseapp.com",
+          projectId: "globalhealthallies",
+          storageBucket: "globalhealthallies.appspot.com",
+          messagingSenderId: "174777389207",
+          appId: "1:174777389207:web:0940b1cc0c49a594ab59d2",
+          measurementId: "G-7SKX7TWY3K"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
     <div id="landscape-popup" class="landscape-popup">
         <p>Please rotate your device to landscape mode for the best experience.</p>
     </div>

@@ -4,22 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function redirectToBMIPage() {
     // Redirect to the login page
-    window.location.href = "../sub-pages/BMI Calculator/BMI_calculator.html";
+    window.location.href = "./sub-pages/BMI Calculator/BMI_calculator.html";
 }
 
 function redirectToMed_MatchPage() {
     // Redirect to the login page
-    window.location.href = "../sub-pages/Medicine_Suggester/Medicine_suggester.html";
+    window.location.href = "./sub-pages/Medicine_Suggester/Medicine_suggester.html";
 }
 
 function redirectToMedInfoPage() {
     // Redirect to the login page
-    window.location.href = "../sub-pages/Pharmavogue/medicineinfo.html";
+    window.location.href = "./sub-pages/Pharmavogue/medicineinfo.html";
 }
 
 function redirectToHospiMatchPage() {
     // Redirect to the login page
-    window.location.href = "../sub-pages/Hospital suggester/Hospital_suggester.html";
+    window.location.href = "./sub-pages/Hospital suggester/Hospital_suggester.html";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
